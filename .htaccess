@@ -1,0 +1,19 @@
+RewriteEngine On
+
+# Kiểm tra nếu URL kết thúc bằng .html
+RewriteCond %{REQUEST_URI} \.html$
+
+#Chuẩn 1
+#RewriteRule ^dich-vu/([a-zA-Z0-9_-]+)\.html$ index.php?mod=service&controller=index&action=index
+
+
+#Link thân thiện cho dịch vụ
+# dich-vu-phan-mem
+RewriteRule ^dich-vu/phan-mem\.html$ index.php?mod=service&controller=index&action=software
+#dich-vu-zalo-mini-app
+RewriteRule ^dich-vu/zalo-mini-app\.html$ index.php?mod=service&controller=index&action=zalo
+# Áp dụng quy tắc RewriteRule cho các trường hợp khác
+RewriteRule ^dich-vu/website\.html$ index.php?mod=service&controller=index&action=index
+
+#san-pham
+RewriteRule ^san-pham/thiet-ke-web\.html$ index.php?mod=product&controller=index&action=web
