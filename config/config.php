@@ -11,7 +11,7 @@
  * 
  */
 
-$config['base_url'] = "http://localhost/wind-lap-trinh/windlaptrinh-project/wind-project/";
+$config['base_url'] = "http://localhost/wind-lap-trinh/wind-project/";
 
 
 $config['default_module'] = 'home';
