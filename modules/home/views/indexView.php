@@ -76,34 +76,6 @@
                     </div>
                     <?php } ?>
                 <?php } ?>
-
-                    <!-- <div class="col-lg-4 col-sm-6">
-                        <div class="item-single mb-30">
-                        <div class="icon purple">
-                            <img class="img-service" src="public/images/icon-15.png" alt="Icon">
-                        </div>
-                        <h3>SEO từ khóa Google</h3>
-                        <p>Trong thế giới số hóa ngày nay, việc xuất hiện trên hàng đầu trong kết quả tìm kiếm của Google không chỉ là một ưu tiên mà còn là một yếu tố quyết định thành công của mọi doanh nghiệp trực tuyến. Chúng tôi không chỉ tập trung vào việc tối ưu hóa từ khóa mà còn áp dụng các chiến lược SEO toàn diện để giúp bạn vươn lên trên các bảng xếp hạng tìm kiếm và thu hút lượng truy cập đáng kể.</p>
-                        </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                        <div class="item-single mb-30">
-                        <div class="icon orange">
-                            <img class="img-service" src="public/images/icon-16.png" alt="Icon">
-                        </div>
-                        <h3>Khám phá công nghệ</h3>
-                        <p>Tại Wind Lập Trình, chúng tôi không chỉ là người theo đuổi xu hướng công nghệ mà còn là những người sáng tạo định hình tương lai. Dẫn đầu với sự đổi mới và đam mê, chúng tôi luôn tìm kiếm và ứng dụng những công nghệ mới nhất để tạo ra các giải pháp tiên tiến và hiệu quả cho khách hàng của mình.</p>
-                        </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                        <div class="item-single mb-30">
-                        <div class="icon green">
-                            <img class="img-service" src="public/images/icon-17.png" alt="Icon">
-                        </div>
-                        <h3>Trải nghiệm công nghệ tiên tiến</h3>
-                        <p>Wind Lập Trình không chỉ là nơi cung cấp các dịch vụ công nghệ thông tin mà còn là điểm đến của sự sáng tạo và tiến bộ. Với đội ngũ chuyên gia hàng đầu và tinh thần đổi mới không ngừng, chúng tôi cam kết mang đến cho bạn trải nghiệm công nghệ tiên tiến nhất, giúp bạn vươn lên và nổi bật trong thế giới kỹ thuật số phát triển nhanh chóng này.</p>
-                        </div>
-                        </div> -->
                 </div>
             </div>
         </div>
@@ -119,6 +91,11 @@
 <section id="about" class="about-area about-3 bg-white pt-120 pb-90">
     <div class="container">
         <div class="row align-items-center">
+        <?php foreach ($post_home as $item) {
+            if($item['section'] == "about"){
+            
+            ?>
+
             <div class="col-lg-5">
                 <div class="section-title">
                     <span class="icon ms-0">
@@ -141,6 +118,8 @@
                     <img src="public/images/<?php echo $item['image'] ?>" alt="About Image">
                 </div>
             </div>
+            <?php } ?>
+        <?php } ?>
         </div>
     </div>
 </section>
@@ -150,23 +129,29 @@
 <section id="integration" class="integration-area integration-4 pb-90">
     <div class="container">
         <div class="row align-items-center">
+            <?php foreach($post_home as $item){ 
+                if($item['section'] == 'contact'){
+                ?>
             <div class="col-lg-5">
                 <div class="section-title">
                     <span class="icon ms-0">
-                        <i class="fal fa-database"></i>
+                        <i class="<?php echo $item['icon'] ?>"></i>
                     </span>
-                    <h2 class="title">Lý do để bạn chọn Wind Lập Trình</h2>
-                    <p>Với Wind Lập Trình, bạn không chỉ nhận được các giải pháp công nghệ hàng đầu mà còn trải nghiệm sự chuyên nghiệp và tận tâm từ đội ngũ chuyên gia của chúng tôi. Chúng tôi cam kết mang đến cho bạn những sản phẩm và dịch vụ vượt trội, đồng thời hỗ trợ và tạo điều kiện tốt nhất để bạn đạt được mục tiêu kinh doanh của mình.</p>
+                    <h2 class="title"><?php echo $item['title'] ?></h2>
+                    <p><?php echo $item['content'] ?></p>
                 </div>
                 <div class="item-single mb-30">
                     <div class="icon">
                         <i class="fal fa-check"></i>
                     </div>
                     <div class="content">
-                        <p>Nơi hội tụ sự đam mê, sáng tạo và công nghệ tiên tiến, để cùng nhau xây dựng những giải pháp kỹ thuật số xuất sắc và đột phá!</p>
+                        <p><?php echo $item['comment'] ?></p>
                     </div>
                 </div>
             </div>
+            <?php } ?>
+            <?php } ?>
+
             <div class="col-lg-7">
                 <div class="images mb-30">
                     <div class="image">

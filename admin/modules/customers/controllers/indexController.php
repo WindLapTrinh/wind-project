@@ -11,80 +11,68 @@ function indexAction()
 }
 #end method
 
-#envent
+#event 
 function addAction()
 {
     if (isset($_POST['btn-add'])) {
         global $error;
         $error = array();
 
+        $name = isset($_POST['name']) ? $_POST['name'] : '';
         $title = isset($_POST['title']) ? $_POST['title'] : '';
         $content = isset($_POST['content']) ? $_POST['content'] : '';
         $icon = isset($_POST['icon']) ? $_POST['icon'] : '';
-        $comment = isset($_POST['comment']) ? $_POST['comment'] : '';
-        $section = isset($_POST['section']) ? $_POST['section'] : '';
+        $note = isset($_POST['note']) ? $_POST['note'] : '';
 
-        if ($_FILES['file']['name'] != null) {
-            //Thư mục chứa file load
+        // Xử lý upload ảnh đại diện
+        if ($_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
             $upload_dir = 'public/images/';
-
-            //Đường dẫn của file  sau khi upload.
-            $upload_file = $upload_dir . $_FILES['file']['name'];
-
-            //Xử lý khi upload đúng file ảnh
-            $type_allow = array('png', 'jpg', 'gif', 'jpeg','webp');
-            $type = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
-            if (!in_array(strtolower($type), $type_allow)) {
-                $error['type'] = "Đường dẫn ảnh phải là jpg, png, gif, ipeg";
+            $avatar_file = $upload_dir . $_FILES['avatar']['name'];
+            // Thực hiện các bước kiểm tra và xử lý upload ảnh tương tự như trên
+            // ...
+            if (move_uploaded_file($_FILES['avatar']['tmp_name'], $avatar_file)) {
+                $avatar = $_FILES['avatar']['name'];
             } else {
-                //Kiểm tra ảnh phải nhỏ hơn 20MB ~ 29.000.000
-                $file_size = $_FILES['file']['size'];
-                if ($file_size > 29000000) {
-                    $error['file_size'] = "File ảnh phải nhỏ hơn 20MB";
-                }
-
-                //Kiểm tra xem có cùng tên trên hệ thôngs hay không
-                if (file_exists($upload_file)) {
-                    $file_name = pathinfo($_FILES['file']['name'], PATHINFO_FILENAME);
-                    $new_file_name = $file_name . '- Copy.';
-                    $new_upload_file = $upload_dir . $new_file_name . $type;
-
-                    //Tang chi so khi file do da ton tai
-                    $k = 1;
-                    while (file_exists($new_upload_file)) {
-                        $new_file_name = $file_name . "- Copy{$k}.";
-                        $k++;
-                        $new_upload_file = $upload_dir . $new_file_name . $type;
-                    }
-                    $upload_file = $new_upload_file;
-                }
+                $error['avatar'] = "Upload ảnh đại diện thất bại";
             }
-            if (move_uploaded_file($_FILES['file']['tmp_name'], $upload_file)) {
-                $image = $_FILES['file']['name'];
-            } else {
-                $error['image'] = "Upload thất bại";
-            }
-            show_array($_FILES);
-            // Nếu không có lỗi, thêm dữ liệu vào cơ sở dữ liệu
-        }else{
-            $image = "";
+        } else {
+            $error['avatar'] = "Lỗi khi upload ảnh đại diện";
         }
+
+        // Xử lý upload ảnh logo
+        if ($_FILES['logo']['error'] === UPLOAD_ERR_OK) {
+            $upload_dir = 'public/images/';
+            $logo_file = $upload_dir . $_FILES['logo']['name'];
+            // Thực hiện các bước kiểm tra và xử lý upload ảnh tương tự như trên
+            // ...
+            if (move_uploaded_file($_FILES['logo']['tmp_name'], $logo_file)) {
+                $logo = $_FILES['logo']['name'];
+            } else {
+                $error['logo'] = "Upload ảnh logo thất bại";
+            }
+        } else {
+            $error['logo'] = "Lỗi khi upload ảnh logo";
+        }
+
+        // Kiểm tra và xử lý lỗi
         if (empty($error)) {
             $data = array(
+                'name' => $name,
                 'title' => $title,
                 'content' => $content,
                 'icon' => $icon,
-                'comment' => $comment,
-                'section' => $section,
-                'image' => $image,
+                'note' => $note,
+                'avatar' => isset($avatar) ? $avatar : "",
+                'logo' => isset($logo) ? $logo : "",
             );
             Add($data);
-        }
-        redirect("?mod=home&action=getList");
-        // show_array($_POST);
+            redirect("?mod=customers&action=getList");
+        } 
     }
     load_view('index');
+
 }
+
 function updateAction()
 {
     //id 
@@ -166,20 +154,22 @@ function updateAction()
     //show_array($data);
     load_view('update', $data);
 }
+
 function deleteAction()
 {
     $id = $_GET['id'];
     echo $id;
     Delete($id);
-    redirect("?mod=home&action=getList");
+    redirect("?mod=customers&action=getList");
 }
+
 function getListAction()
 {
     if (isset($_POST['btn-search'])) {
         //phân trang list_pages
         $search = $_POST['search'];
         //phân trang list_pages
-        $num_rows = db_num_rows("SELECT * FROM `tbl_post_home` WHERE `title` LIKE '%$search%' OR `content` LIKE '%$search%'");
+        $num_rows = db_num_rows("SELECT * FROM `tbl_customer` WHERE `title` LIKE '%$search%' OR `name` LIKE '%$search%'");
         $num_per_page = 10;
         //Tổng số bản ghi
         $total_row  =  $num_rows;
@@ -219,6 +209,6 @@ function getListAction()
         $data['getList'] = $getList;
     }
     //show_array($data);
-    load_view('listHome', $data);
+    load_view('listCustomer', $data);
 }
 #end event

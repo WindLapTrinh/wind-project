@@ -25,17 +25,16 @@
                 </ul>
             </li>
             <li class="nav-link">
-                <a href="?mod=post&action=list_post">
+                <a href="?mod=customers&action=getList">
                     <div class="nav-link-icon d-inline-flex">
                         <i class="far fa-folder"></i>
                     </div>
-                    Sản phẩm
+                    Khách hàng
                 </a>
                 <i class="arrow fas fa-angle-right"></i>
                 <ul class="sub-menu">
-                    <li><a href="?mod=post&action=add">Thêm mới</a></li>
-                    <li><a href="?mod=post&action=list_post">Danh sách</a></li>
-                    <li><a href="?mod=post&action=cat">Danh mục</a></li>
+                    <li><a href="?mod=customers&action=add">Thêm mới</a></li>
+                    <li><a href="?mod=customers&action=getList">Danh sách</a></li>
                 </ul>
             </li>
             <li class="nav-link">

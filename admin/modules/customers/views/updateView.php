@@ -6,13 +6,22 @@ get_sidebar();
     <div id="content" class="container-fluid">
         <div class="card">
             <div class="card-header font-weight-bold">
-                Cập nhập thông tin bài viết
+                Cập nhập thông tin khách hàng
             </div>
             <div class="card-body">
-            <form action="" enctype="multipart/form-data" method="POST">
+                <form action="" enctype="multipart/form-data" method="POST">
+                    <div class="form-group">
+                        <label for="name">Tên khách hàng</label>
+                        <input class="form-control" type="text" name="name" id="name" value="<?php echo $getListId['name'] ?>">
+                    </div>
                     <div class="form-group">
                         <label for="title">Tiêu đề bài viết</label>
                         <input class="form-control" type="text" name="title" id="title" value="<?php echo $getListId['title'] ?>">
+                    </div>
+                    <?php echo form_error('title') ?>
+                    <div class="form-group">
+                        <label for="note">Ghi chú</label>
+                        <input class="form-control" type="text" name="note" id="note" value="<?php echo $getListId['note'] ?>">
                     </div>
                     <?php echo form_error('title') ?>
                     <div class="form-group">
@@ -26,19 +35,14 @@ get_sidebar();
                     </div>
                     <?php echo form_error('icon') ?>
                     <div class="form-group">
-                        <label for="comment">Nội dung liên quan</label>
-                        <input class="form-control" type="comment" name="comment" id="comment" value="<?php echo $getListId['comment'] ?>">
+                        <label for="avatar">Ảnh khách hàng</label>
+                        <input class="form-control" type="file" name="avatar" id="avatar" value="<?php echo $getListId['avatar'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="image">Ảnh bài viết</label>
-                        <input class="form-control" type="file" name="file" id="file" value="<?php echo $getListId['image'] ?>">
+                        <label for="logo">Logo của khách hàng</label>
+                        <input class="form-control" type="file" name="logo" id="logo" value="<?php echo $getListId['logo'] ?>">
                     </div>
-                    <?php echo form_error('image') ?>
-                    <div class="form-group">
-                        <label for="section">Thể loại</label>
-                        <input class="form-control" type="text" name="section" id="section" value="<?php echo $getListId['section'] ?>">
-                    </div>
-                    <?php echo form_error('section') ?>
+                    <?php echo form_error('logo') ?>
                     <button type="submit" name="btn-edit" class="btn btn-primary">Cập nhập</button>
                 </form>
             </div>
