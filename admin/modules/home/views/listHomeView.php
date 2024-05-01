@@ -92,8 +92,8 @@ get_sidebar();
                     </tbody>
                 </table>
                 <nav aria-label="Page navigation example">
-                    <!-- <?php echo  get_pagging($num_page, $page, "?mod=post&action=list_post") ?>
-                    <p class="num-rows"> Có tổng <?php echo $num_rows ?> bài viết </p> -->
+                    <?php echo  getPage($num_page, $page, "?mod=home&action=getList") ?>
+                    <p class="num-rows"> Có tổng <?php echo $num_rows ?> bài viết </p>
                 </nav>
             </div>
         </div>

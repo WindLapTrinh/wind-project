@@ -11,7 +11,7 @@
                 <i class="arrow fas fa-angle-right"></i>
             </li>
             <li class="nav-link">
-                <a href="?mod=home&action=list_pages">
+                <a href="?mod=home&action=getList">
                     <div class="nav-link-icon d-inline-flex">
                         <i class="far fa-folder"></i>
                     </div>
@@ -21,7 +21,6 @@
 
                 <ul class="sub-menu">
                     <li><a href="?mod=home&action=add">Thêm mới</a></li>
-                    <li><a href="?mod=home&action=update">Cập nhập thông tin</a></li>
                     <li><a href="?mod=home&action=getList">Danh sách</a></li>
                 </ul>
             </li>

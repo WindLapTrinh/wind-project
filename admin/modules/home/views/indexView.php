@@ -14,23 +14,24 @@ get_sidebar();
                         <label for="title">Tiêu đề bài viết</label>
                         <input class="form-control" type="text" name="title" id="title">
                     </div>
-                    <?php echo form_error('title') ?>
-
                     <div class="form-group">
                         <label for="pcontent">Nội dung bài viết</label>
                         <textarea name="content" class="form-control" id="content" cols="30" rows="5"></textarea>
                     </div>
-                    <?php echo form_error('pcontent') ?>
                     <div class="form-group">
-                        <label for="page_title">Icon</label>
+                        <label for="icon">Icon</label>
                         <input class="form-control" type="text" name="icon" id="icon">
                     </div>
                     <div class="form-group">
-                        <label for="page_title">Danh mục</label>
-                        <input class="form-control" type="text" name="categori" id="categori">
+                        <label for="comment">Mô tả thể loại</label>
+                        <input class="form-control" type="text" name="comment" id="comment">
                     </div> 
                     <div class="form-group">
-                        <label for="page_title">Ảnh bài viết</label>
+                        <label for="section">Thể loại</label>
+                        <input class="form-control" type="text" name="section" id="section">
+                    </div> 
+                    <div class="form-group">
+                        <label for="file">Ảnh bài viết</label>
                         <input class="form-control" type="file" name="file" id="file">
                     </div>    
                     <?php echo form_error('image') ?>                               

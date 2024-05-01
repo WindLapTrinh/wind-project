@@ -68,7 +68,7 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="item-single mb-30">
                             <div class="icon red">
-                                <img class="img-service" src="<?php echo $item['icon'] ?>" alt="Icon">
+                                <img class="img-service" src="public/images/<?php echo $item['icon'] ?>" alt="Icon">
                             </div>
                             <h3><?php echo $item['title'] ?></h3>
                             <p><?php echo $item['content'] ?></p>
@@ -138,7 +138,7 @@
             </div>
             <div class="col-lg-7 order-lg-first">
                 <div class="image image-left">
-                    <img src="<?php echo $item['image'] ?>" alt="About Image">
+                    <img src="public/images/<?php echo $item['image'] ?>" alt="About Image">
                 </div>
             </div>
         </div>
