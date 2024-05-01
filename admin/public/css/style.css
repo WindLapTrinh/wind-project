@@ -62,7 +62,7 @@ a:hover {
 }
 
 #content {
-    padding-top: 20px;
+    padding-top: 55px;
     padding-bottom: 20px;
 }
 
@@ -166,4 +166,7 @@ ul#sidebar-menu * {
 .image_product{
     width: 80px;
     height: 80px;
+}
+.post-title{
+    color: black !important;
 }
