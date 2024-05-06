@@ -1,6 +1,6 @@
 <?php
-get_header();
-get_sidebar();
+// get_header();
+// get_sidebar();
 ?>
 <div id="wp-content">
     <div id="content" class="container-fluid">

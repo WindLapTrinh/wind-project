@@ -35,12 +35,12 @@
                         <a class="dropdown-item" href="?view=list-order">Thêm đơn hàng</a>
                     </div>
                 </div>
-                <div class="btn-group">
-                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="btn-group ">
+                    <button type="button" class="btn dropdown-toggle name-login" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                        Wind
                     <!-- <?php echo $_SESSION['user_login']; ?> -->
                     </button>
-                    <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-menu dropdown-menu-right ">
                         <a class="dropdown-item" href="?mod=users&action=add">Tài khoản</a>
                         <a class="dropdown-item" href="?mod=users&action=logout">Thoát</a>
                     </div>

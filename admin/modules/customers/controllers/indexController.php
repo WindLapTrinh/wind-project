@@ -78,38 +78,40 @@ function updateAction()
     //id 
     $id = $_GET['id'];
 
-    if (isset($_POST['btn-edit'])) {
-        //Kiểm tra dữ liệu       
-        $title = $_POST['title'];
-        $content = $_POST['content'];
-        $image = $_POST['image'];
-        $section = $_POST['section'];
-        $icon = $_POST['icon'];
-        $comment = $_POST['comment'];
+    // Lấy thông tin khách hàng cần chỉnh sửa từ database
+    $getListId = getListId($id);
 
-        //xử lý update image
-        if ($_FILES['file']['name'] != null) {
+    if (isset($_POST['btn-edit'])) {
+        //Kiểm tra dữ liệu     
+        $name = $_POST['name'];  
+        $title = $_POST['title'];
+        $note = $_POST['note'];
+        $content = $_POST['content'];
+        $icon = $_POST['icon'];
+
+        //xử lý update avatar
+        if ($_FILES['avatar']['name'] != null) {
             //Thư mục chứa file load
             $upload_dir = 'public/images/';
 
             //Đường dẫn của file  sau khi upload.
-            $upload_file = $upload_dir . $_FILES['file']['name'];
+            $upload_file = $upload_dir . $_FILES['avatar']['name'];
 
             //Xử lý khi upload đúng file ảnh
             $type_allow = array('png', 'jpg', 'gif', 'jpeg','webp');
-            $type = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
+            $type = pathinfo($_FILES['avatar']['name'], PATHINFO_EXTENSION);
             if (!in_array(strtolower($type), $type_allow)) {
                 $error['type'] = "Đường dẫn ảnh phải là jpg, png, gif, ipeg";
             } else {
                 //Kiểm tra ảnh phải nhỏ hơn 20MB ~ 29.000.000
-                $file_size = $_FILES['file']['size'];
+                $file_size = $_FILES['avatar']['size'];
                 if ($file_size > 29000000) {
                     $error['file_size'] = "File ảnh phải nhỏ hơn 20MB";
                 }
 
                 //Kiểm tra xem có cùng tên trên hệ thôngs hay không
                 if (file_exists($upload_file)) {
-                    $file_name = pathinfo($_FILES['file']['name'], PATHINFO_FILENAME);
+                    $file_name = pathinfo($_FILES['avatar']['name'], PATHINFO_FILENAME);
                     $new_file_name = $file_name . '- Copy.';
                     $new_upload_file = $upload_dir . $new_file_name . $type;
 
@@ -123,30 +125,79 @@ function updateAction()
                     $upload_file = $new_upload_file;
                 }
             }
-            if (move_uploaded_file($_FILES['file']['tmp_name'], $upload_file)) {
-                $image = $_FILES['file']['name'];
+            if (move_uploaded_file($_FILES['avatar']['tmp_name'], $upload_file)) {
+                $avatar = $_FILES['avatar']['name'];
             } else {
-                $error['image'] = "Upload thất bại";
+                $error['avatar'] = "Upload thất bại";
             }
             show_array($_FILES);
             // Nếu không có lỗi, thêm dữ liệu vào cơ sở dữ liệu
         }else{
-            $image = "";
+            // Nếu không có ảnh được upload, sử dụng ảnh cũ từ database
+            $avatar = $getListId['avatar'];
+        }
+
+        //xử lý ảnh logo
+        if ($_FILES['logo']['name'] != null) {
+            //Thư mục chứa file load
+            $upload_dir = 'public/images/';
+
+            //Đường dẫn của file  sau khi upload.
+            $upload_file = $upload_dir . $_FILES['logo']['name'];
+
+            //Xử lý khi upload đúng file ảnh
+            $type_allow = array('png', 'jpg', 'gif', 'jpeg','webp');
+            $type = pathinfo($_FILES['logo']['name'], PATHINFO_EXTENSION);
+            if (!in_array(strtolower($type), $type_allow)) {
+                $error['type'] = "Đường dẫn ảnh phải là jpg, png, gif, ipeg";
+            } else {
+                //Kiểm tra ảnh phải nhỏ hơn 20MB ~ 29.000.000
+                $file_size = $_FILES['logo']['size'];
+                if ($file_size > 29000000) {
+                    $error['file_size'] = "File ảnh phải nhỏ hơn 20MB";
+                }
+
+                //Kiểm tra xem có cùng tên trên hệ thôngs hay không
+                if (file_exists($upload_file)) {
+                    $file_name = pathinfo($_FILES['logo']['name'], PATHINFO_FILENAME);
+                    $new_file_name = $file_name . '- Copy.';
+                    $new_upload_file = $upload_dir . $new_file_name . $type;
+
+                    //Tang chi so khi file do da ton tai
+                    $k = 1;
+                    while (file_exists($new_upload_file)) {
+                        $new_file_name = $file_name . "- Copy{$k}.";
+                        $k++;
+                        $new_upload_file = $upload_dir . $new_file_name . $type;
+                    }
+                    $upload_file = $new_upload_file;
+                }
+            }
+            if (move_uploaded_file($_FILES['logo']['tmp_name'], $upload_file)) {
+                $logo = $_FILES['logo']['name'];
+            } else {
+                $error['logo'] = "Upload thất bại";
+            }
+            show_array($_FILES);
+            // Nếu không có lỗi, thêm dữ liệu vào cơ sở dữ liệu
+        }else{
+            $logo = $getListId['logo'];
         }
         //Xuất dữ liệu, update qua database
         if (empty($error)) {
             $data = array(
-                //'user_id' => $user_id,
+                //'user_id' => $user_id,'
+                'name' => $name,
                 'title' => $title,
+                'note' => $note,
                 'content' => $content,
-                'image' => $image,
-                'section' => $section,
+                'avatar' => $avatar,
                 'icon' => $icon,
-                'comment' => $comment
+                'logo' => $logo
             );
             Update($id, $data);
         }
-        redirect("?mod=home&action=getList");
+        redirect("mod=customers&action=getList");
     }
     $getListId = getListId($id);
 

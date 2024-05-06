@@ -22,6 +22,12 @@ function getList($start = 1, $num_per_page = 5, $where = "")
     return $getList;
 }
 
+function getListId($id){
+    $item = db_fetch_row("SELECT * FROM `tbl_customer` WHERE `id`= '{$id}'");
+    if (!empty($item))
+        return $item;
+}
+
 function getListSearch($search){
     $item = db_fetch_array("SELECT * FROM `tbl_customer` WHERE `title` LIKE '%$search%' OR `name` LIKE '%$search%'");
     if (!empty($item))

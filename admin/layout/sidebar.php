@@ -38,7 +38,7 @@
                 </ul>
             </li>
             <li class="nav-link">
-                <a href="?mod=product&action=list_product">
+                <a href="?mod=service&action=getList">
                     <div class="nav-link-icon d-inline-flex">
                         <i class="far fa-folder"></i>
                     </div>
@@ -46,9 +46,9 @@
                 </a>
                 <i class="arrow fas fa-angle-down"></i>
                 <ul class="sub-menu">
-                    <li><a href="?mod=product&action=add">Thêm mới</a></li>
-                    <li><a href="?mod=product&action=list_product">Danh sách</a></li>
-                    <li><a href="?mod=product&action=cat">Danh mục</a></li>
+                    <li><a href="?mod=service&action=add">Thêm mới</a></li>
+                    <li><a href="?mod=service&action=getList">Danh sách</a></li>
+                    <li><a href="?mod=service&action=cat">Danh mục</a></li>
                 </ul>
             </li>
             <li class="nav-link">
