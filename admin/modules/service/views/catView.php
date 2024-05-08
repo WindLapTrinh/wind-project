@@ -46,6 +46,7 @@ get_sidebar();
                                     <th scope="col">Tên danh mục</th>
                                     <th scope="col">Nội dung</th>
                                     <th>Loại danh mục</th>
+                                    <th>Icon</th>
 
 
                                 </tr>
@@ -57,8 +58,10 @@ get_sidebar();
                                             <th scope="row"><?php echo $item['name'] ?></th>
                                             <td><?php echo $item['content'] ?></td>
                                             <td><?php echo $item['section'] ?></td>
+                                            <td><?php echo $item['icon'] ?></td>
+
                                             <td>
-                                                <a href="?mod=service&action=editCat&id=<?php echo $item['id'] ?>">
+                                                <a href="?mod=service&action=updateCat&id=<?php echo $item['id'] ?>">
                                                     <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
                                                 </a>
                                                 <a href="?mod=service&action=deleteCat&id=<?php echo $item['id'] ?>" onclick="deleteAlert()">

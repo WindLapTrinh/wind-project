@@ -71,7 +71,38 @@ function addAction()
     }
     load_view('index');
 }
+function updateCatAction()
+{
+    //id 
+    $id = $_GET['id'];
 
+    // Lấy thông tin khách hàng cần chỉnh sửa từ database
+    $getListCatId = getListCatId($id);
+
+    if (isset($_POST['btn-edit'])) {
+        $name = isset($_POST['name']) ? $_POST['name'] : '';
+        $content = isset($_POST['content']) ? $_POST['content'] : '';
+        $icon = isset($_POST['icon']) ? $_POST['icon'] : '';
+        $section = isset($_POST['section']) ? $_POST['section'] : '';
+
+        // Kiểm tra và xử lý lỗi
+        if (empty($error)) {
+            $data = array(
+                'name' => $name,
+                'content' => $content,
+                'icon' => $icon,
+                'section' => $section,
+            );
+            updateCat($id, $data);
+            redirect("?mod=service&action=cat");
+        }        
+    }
+    
+
+    $data['getListCatId'] = $getListCatId;
+    //show_array($data);
+    load_view('updateCat', $data);
+}
 function catAction(){
 
     $getListCat = getListCat();
