@@ -112,7 +112,6 @@
     </div>
 </section>
 <!-- End About Area -->
-
 <!-- Start integration Area -->
 <section id="integration" class="integration-area integration-4 pb-90">
     <div class="container">

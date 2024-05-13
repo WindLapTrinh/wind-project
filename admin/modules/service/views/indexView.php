@@ -15,21 +15,22 @@ get_sidebar();
                         <input class="form-control" type="text" name="name" id="name">
                     </div>
                     <div class="form-group">
-                        <label for="p\content">Nội dung</label>
+                        <label for="service">Loại dịch vụ</label>
+                        <input class="form-control" type="text" name="service" id="service">
+                    </div>
+                    <div class="form-group">
+                        <label for="section">Nội dung liên quan</label>
+                        <input class="form-control" type="text" name="section" id="section">
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Nội dung</label>
                         <textarea name="content" class="form-control" id="content" cols="30" rows="5"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="icon">Icon</label>
                         <input class="form-control" type="text" name="icon" id="icon">
                     </div>
-                    <div class="form-group">
-                        <label for="">Danh mục</label>
-                        <select name="category" class="form-control" id="">
-                            <option>Chọn danh mục</option>
-                                <option>Google</option>
-                                <option>Sofware</option>
-                        </select>
-                    </div>
+                    
                     <div class="form-group">
                         <label for="note">Ghi chú</label>
                         <input class="form-control" type="text" name="note" id="note">
