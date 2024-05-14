@@ -10,6 +10,10 @@ function Update($id, $data){
     return db_update('tbl_service', $data, "`id` = '{$id}'");
 }
 
+function Delete($id){
+    return db_delete('tbl_service', "`id` = '{$id}'");
+}
+
 function getListId($id){
     $item = db_fetch_row("SELECT * FROM `tbl_service` WHERE `id`= '{$id}'");
     if (!empty($item))

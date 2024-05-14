@@ -146,6 +146,12 @@ function updateAction()
     //show_array($data);
     load_view('update', $data);
 }
+function deleteAction(){
+    $id = $_GET['id'];
+    echo $id;
+    Delete($id);
+    redirect("?mod=service&action=getList");
+}
 function getListAction()
 {
     if (isset($_POST['btn-search'])) {
