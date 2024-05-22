@@ -19,8 +19,12 @@ get_sidebar();
                         <input class="form-control" type="text" name="service" id="service">
                     </div>
                     <div class="form-group">
-                        <label for="section">Nội dung liên quan</label>
+                        <label for="section">Loại nội dung liên kết</label>
                         <input class="form-control" type="text" name="section" id="section">
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Loại bài viết hiển thị</label>
+                        <input class="form-control" type="text" name="category" id="category">
                     </div>
                     <div class="form-group">
                         <label for="content">Nội dung</label>

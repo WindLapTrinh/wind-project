@@ -22,11 +22,15 @@ get_sidebar();
                             </div>
                             <div class="form-group">
                                 <label for="content">Nội dung</label>
-                                <input class="form-control" type="text" name="content" id="icon">
+                                <input class="form-control" type="text" name="content" id="content">
                             </div>
                             <div class="form-group">
                                 <label for="section">Loại danh mục</label>
-                                <input class="form-control" type="section" name="section" id="icon">
+                                <input class="form-control" type="section" name="section" id="section">
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Loại content</label>
+                                <input class="form-control" type="category" name="category" id="category">
                             </div>
 
                             <button type="submit" name="btn-add" class="btn btn-primary">Thêm mới</button>

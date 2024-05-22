@@ -16,6 +16,11 @@ get_sidebar();
                     </div>
                     <?php echo form_error('name') ?>
                     <div class="form-group">
+                        <label for="icon">Icon</label>
+                        <input class="form-control" type="text" name="icon" id="icon" value="<?php echo $getListCatId['icon'] ?>">
+                    </div>
+                    <?php echo form_error('icon') ?>
+                    <div class="form-group">
                         <label for="content">Nội dung danh mục</label>
                         <textarea name="content" class="form-control" id="content" cols="30" rows="5"><?php echo $getListCatId['content'] ?></textarea>
                     </div>
@@ -25,8 +30,8 @@ get_sidebar();
                         <input class="form-control" type="text" name="section" id="section" value="<?php echo $getListCatId['section'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="icon">Loại Danh mục</label>
-                        <input class="form-control" type="text" name="icon" id="icon" value="<?php echo $getListCatId['icon'] ?>">
+                        <label for="category">Loại Nội dung</label>
+                        <input class="form-control" type="text" name="category" id="category" value="<?php echo $getListCatId['category'] ?>">
                     </div>
 
                     <button type="submit" name="btn-edit" class="btn btn-primary">Cập nhập</button>

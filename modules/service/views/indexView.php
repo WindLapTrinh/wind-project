@@ -80,54 +80,53 @@
     <div class="container">
         <div class="row align-items-center gx-xl-5">
             <div class="col-lg-5">
-                <div class="section-title">
-                    <span class="tag">Lợi ích khi bạn trãi nghiệm dịch vụ bên Wind</span>
-                    <h2 class="title">Dịch vụ Thiết kế Website</h2>
-                    <p>Wind Lập Trình tạo ra các trang web độc đáo, thân thiện với người dùng và tối ưu trên mọi nền tảng, giúp doanh nghiệp tỏa sáng trên internet.</p>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-12 col-sm-6">
-                        <div class="item-single mb-30">
-                            <div class="icon blue bg-blue">
-                                <i class="fal fa-columns"></i>
-                            </div>
-                            <div class="content">
-                                <h3>Phân tích nhu cầu</h3>
-                                <p>Hiểu rõ yêu cầu và mục tiêu kinh doanh của khách hàng.</p>
-                            </div>
+                <?php foreach ($getServiceWebsite as $item) {
+                    if ($item['section'] == 'website' && $item['category'] == 'analysis') {
+                ?>
+                        <div class="section-title">
+                            <span class="tag"><?php echo $item['note'] ?></span>
+                            <h2 class="name"><?php echo $item['name'] ?></h2>
+                            <p><?php echo $item['content'] ?></p>
                         </div>
-                    </div>
-                    <div class="col-md-12 col-sm-6">
-                        <div class="item-single mb-30">
-                            <div class="icon green bg-green">
-                                <i class="fal fa-comments"></i>
+                    <?php } ?>
+                <?php } ?>
+
+                <?php foreach ($getServiceWebsite as $item) { ?>
+                    <?php foreach ($getContentServiceWeb as $itemContent) {
+                        if (($item['category'] == 'analysis' && $itemContent['category'] == 'analysis') && ($item['section'] == 'website' && $itemContent['section'] == 'website')) {
+                    ?>
+                            <div class="row justify-content-center">
+                                <div class="col-md-12 col-sm-6">
+                                    <div class="item-single mb-30">
+                                        <div class="icon blue bg-blue">
+                                            <i class="<?php echo $itemContent['icon'] ?>"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h3><?php echo $itemContent['name'] ?></h3>
+                                            <p><?php echo $itemContent['content'] ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                            <div class="content">
-                                <h3>Thiết kế sáng tạo</h3>
-                                <p>Tạo giao diện độc đáo, thú vị và dễ nhận diện.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-sm-6">
-                        <div class="item-single mb-30">
-                            <div class="icon red bg-red">
-                                <i class="fal fa-sync-alt"></i>
-                            </div>
-                            <div class="content">
-                                <h3>Tối ưu trải nghiệm người dùng:</h3>
-                                <p>Đảm bảo trải nghiệm mượt mà trên mọi thiết bị</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        <?php } ?>
+                    <?php } ?>
+                <?php } ?>
             </div>
-            <div class="col-lg-7">
-                <div class="image image-right mb-30">
-                    <div class="lazy-container aspect-ratio aspect-ratio-4-3">
-                        <img class="lazyload lazy-image image-content" src="public/images/service/web_2.jpg" data-src="public/images/service/web_2.jpg" alt="Choose Image">
+
+            <?php foreach ($getServiceWebsite as $item) {
+                if ($item['section'] == 'website' && $item['category'] == 'analysis') {
+            ?>
+                    <div class="col-lg-7">
+                        <div class="image image-right mb-30">
+                            <div class="lazy-container aspect-ratio aspect-ratio-4-3">
+                                <img class="lazyload lazy-image image-content" src="public/images/service/<?php echo $item['image'] ?>" data-src="public/images/service/<?php echo $item['image'] ?>" alt="Choose Image">
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                <?php } ?>
+            <?php } ?>
+
         </div>
     </div>
 </section>
@@ -136,40 +135,43 @@
 <!-- Start About Area -->
 <section id="about" class="about-area pt-120 pb-90">
     <div class="container">
-        <div class="row align-items-center gx-xl-5">
-            <div class="col-lg-7">
-                <div class="image image-left mb-30">
-                    <img src="public/images/service/web_3.jpg" alt="about Image">
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="section-title">
-                    <h2 class="title">Tối Ưu Hóa Trải Nghiệm Doanh Nghiệp</h2>
-                    <p>Chúng tôi không chỉ tạo ra các trang web đẹp mắt mà còn tối ưu hóa trải nghiệm người dùng để nâng cao hiệu suất kinh doanh của bạn. Dựa trên phân tích nhu cầu cụ thể, chúng tôi thiết kế giao diện sáng tạo và tối ưu trên mọi thiết bị, giúp doanh nghiệp của bạn tỏa sáng trong môi trường kinh doanh trực tuyến.</p>
-                </div>
-                <div class="item-single mb-30">
-                    <div class="icon">
-                        <i class="fal fa-webcam"></i>
+        <?php foreach ($getServiceWebsite as $item) {
+            if ($item['section'] == 'website' && $item['category'] == 'optimum') {
+        ?>
+                <div class="row align-items-center gx-xl-5">
+                    <div class="col-lg-7">
+                        <div class="image image-left mb-30">
+                            <img src="public/images/service/<?php echo $item['image'] ?>" alt="about Image">
+                        </div>
                     </div>
-                    <div class="content">
-                        <h3>Nội Dung Chất Lượng</h3>
-                        <p>Business Analytics không chỉ tạo ra giao diện mỹ quan mà còn phát triển nội dung hấp dẫn, phản ánh đúng giá trị và thông điệp của doanh nghiệp bạn, từ đó tạo ra trải nghiệm người dùng độc đáo và gắn kết.</p>
+                    <div class="col-lg-5">
+                        <div class="section-title">
+                            <h2 class="name"><?php echo $item['name'] ?></h2>
+                            <p><?php echo $item['content'] ?></p>
+                        </div>
+                        <?php foreach ($getContentServiceWeb as $itemContent) {
+                            if (($item['category'] == 'optimum' && $itemContent['category'] == 'optimum') && ($item['section'] == 'website' && $itemContent['section'] == 'website')) {
+
+                        ?>
+                                <div class="item-single mb-30">
+                                    <div class="icon">
+                                        <i class="fal fa-webcam"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h3>Nội Dung Chất Lượng</h3>
+                                        <p>Business Analytics không chỉ tạo ra giao diện mỹ quan mà còn phát triển nội dung hấp dẫn, phản ánh đúng giá trị và thông điệp của doanh nghiệp bạn, từ đó tạo ra trải nghiệm người dùng độc đáo và gắn kết.</p>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        <?php } ?>
+
+                        <div class="cta-btns mb-30">
+                            <a href="contact.html" class="btn secondary-btn secondary-btn-2">Tư Vấn Ngay</a>
+                        </div>
                     </div>
                 </div>
-                <div class="item-single mb-30">
-                    <div class="icon">
-                        <i class="fal fa-images"></i>
-                    </div>
-                    <div class="content">
-                        <h3>Hỗ Trợ Liên Tục</h3>
-                        <p>Chúng tôi cam kết cung cấp dịch vụ hỗ trợ liên tục và bảo trì định kỳ, đảm bảo rằng trang web của bạn luôn hoạt động ổn định và có thể phát triển theo thời gian.</p>
-                    </div>
-                </div>
-                <div class="cta-btns mb-30">
-                    <a href="contact.html" class="btn secondary-btn secondary-btn-2">Tư Vấn Ngay</a>
-                </div>
-            </div>
-        </div>
+            <?php } ?>
+        <?php } ?>
     </div>
 </section>
 <!-- End About Area -->

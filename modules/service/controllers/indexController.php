@@ -6,8 +6,12 @@ function construct()
 }
 function indexAction()
 {
+    $getServiceWebsite = getServiceWebsite();
+    $getContentServiceWeb = getContentServiceWeb();
+    $data['getServiceWebsite'] = $getServiceWebsite;
+    $data['getContentServiceWeb'] = $getContentServiceWeb;
     //    show_array($list_users);
-    load_view('index');
+    load_view('index', $data);
 }
 function softwareAction()
 {

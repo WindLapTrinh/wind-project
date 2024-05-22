@@ -25,8 +25,7 @@ function addAction()
         $file = isset($_POST['file']) ? $_POST['file'] : '';
         $section = isset($_POST['section']) ? $_POST['section'] : '';
         $service = isset($_POST['service']) ? $_POST['service'] : '';
-
-
+        $category = isset($_POST['category']) ? $_POST['category'] : '';
 
         // Xử lý upload ảnh đại diện
         if ($_FILES['file']['error'] === UPLOAD_ERR_OK) {
@@ -53,7 +52,8 @@ function addAction()
                 'note' => $note,
                 'image' => isset($image) ? $image : "",
                 'section' => $section,
-                'service' => $service
+                'service' => $service,
+                'category' => $category
             );
             Add($data);
             redirect("?mod=secvice&action=getList");
@@ -255,6 +255,8 @@ function catAction()
         $content = isset($_POST['content']) ? $_POST['content'] : '';
         $icon = isset($_POST['icon']) ? $_POST['icon'] : '';
         $section = isset($_POST['section']) ? $_POST['section'] : '';
+        $category = isset($_POST['category']) ? $_POST['category'] : '';
+
 
         // Kiểm tra và xử lý lỗi
         if (empty($error)) {
@@ -263,6 +265,7 @@ function catAction()
                 'content' => $content,
                 'icon' => $icon,
                 'section' => $section,
+                'category' => $category
             );
             addCat($data);
             redirect("?mod=service&action=cat");
