@@ -1,11 +1,12 @@
-<?php get_header();
+<?php
+get_header();
 get_sidebar();
 ?>
 <div id="wp-content">
     <div id="content" class="container-fluid">
         <div class="card">
             <div class="card-header font-weight-bold d-flex justify-content-between align-items-center">
-                <h5 class="m-0 ">Danh sách sản phẩm</h5>
+                <h5 class="m-0 ">Danh sách bài viết</h5>
                 <div class="form-search form-inline">
                     <form action="" method="POST">
                         <input type="" name="search" class="form-control form-search" placeholder="Tìm kiếm">
@@ -35,58 +36,63 @@ get_sidebar();
                             </th>
                             <th scope="col">#</th>
                             <th scope="col">Ảnh</th>
-                            <th scope="col">Tên sản phẩm</th>
-                            <th scope="col">Giá</th>
-                            <th scope="col">Danh mục</th>
+                            <th scope="col">Tiêu đề</th>
+                            <th scope="col">Nội dung</th>
                             <th scope="col">Ngày tạo</th>
-                            <th scope="col">Trạng thái</th>
+                            <th scope="col">Ngày cập nhập</th>
                             <th scope="col">Tác vụ</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                        // Tạo mảng tương ứng giữa category_id và category_name
-                        $categoryMap = array();
-                        foreach ($category_name as $category_item) {
-                            $categoryMap[$category_item['category_id']] = $category_item['category_name'];
-                        } ?>
-                        <?php $imageMap = array();
-                        foreach ($product_images as $image_item) {
-                            $imageMap[$image_item['image_id']] = $image_item['image_url'];
-                        } ?>
+
                         <?php
                         $i = 0;
-                        foreach ($list_product as $item) {
+                        foreach ($getList as $item) {
                             $i++;
-                            $categoryId = $item['category_id'];  
-                            $categoryName = isset($categoryMap[$categoryId]) ? $categoryMap[$categoryId] : 'chưa có';
-                           
-                            $imageId = $item['image_id'];
-                            $imageUrl = isset($imageMap[$imageId]) ? $imageMap[$imageId] : 'chưa có';
-                       ?>
-                            <tr class="">
+                        ?>
+                            <tr>
                                 <td>
                                     <input type="checkbox">
                                 </td>
-                                <td><?php echo $i; ?></td>
-                                <td><img class="image_product" src="public/images/<?php echo $imageUrl ?>" alt=""></td>
-                                <td><a href="#"><?php echo $item['product_name'] ?></a></td>
-                                <td><?php echo $item['product_price'] ?></td>
-                                <td><?php echo $categoryName ?></td>
-                                <td><?php echo $item['created_at'] ?></td>
-                                <td><span class="badge badge-success">Còn hàng</span></td>
+                                <td scope="row"><?php echo $i ?></td>
                                 <td>
-                                    <a href="?mod=product&action=edit&id=<?php echo $item['product_id'] ?>" class="btn btn-success btn-sm rounded-0 text-white" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                                    <a href="?mod=product&action=delete&id=<?php echo $item['product_id'] ?>" class="btn btn-danger btn-sm rounded-0 text-white" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
+                                    <?php if ($item['image']) { ?>
+                                        <img class="image_product" src="public/images/<?php echo $item['image'] ?>" alt="">
+                                    <?php } else { ?>
+                                        <img class="image_product" src="public/images/update.png" alt="">
+                                    <?php } ?>
                                 </td>
+                                <td><a href="" class="name"><?php echo $item['name'] ?></a></td>
+                                <td>
+                                    <?php
+                                    if (strlen($item['content']) > 20) {
+                                        echo substr($item['content'], 0, 20) . '...';
+                                    } else {
+                                        echo $item['content'];
+                                    }
+                                    ?>
+                                </td>
+
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <a href="?mod=product&action=update&id=<?php echo $item['id'] ?>">
+                                        <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
+                                    </a>
+                                    <a href="?mod=product&action=delete&id=<?php echo $item['id'] ?>">
+                                        <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+                                    </a>
+                                </td>
+
                             </tr>
                         <?php } ?>
 
+
+
                     </tbody>
                 </table>
-                <!-- Phan trang  -->
                 <nav aria-label="Page navigation example">
-                    <?php echo  get_pagging($num_page, $page, "?mod=product&action=list_product") ?>
+                    <?php echo  getPage($num_page, $page, "?mod=home&action=getList") ?>
                     <p class="num-rows"> Có tổng <?php echo $num_rows ?> bài viết </p>
                 </nav>
             </div>

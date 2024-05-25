@@ -4,7 +4,9 @@ function construct() {
     load_model('index');
 }
 function webAction() {
-    load_view('index');
+    $getProductWebsite = getProductWebsite();
+    $data['getProductWebsite'] =$getProductWebsite;
+    load_view('index', $data);
 }
 function zaloAction(){
     load_view('zalo');

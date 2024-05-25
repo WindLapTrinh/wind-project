@@ -52,6 +52,19 @@
                 </ul>
             </li>
             <li class="nav-link">
+                <a href="?mod=service&action=getList">
+                    <div class="nav-link-icon d-inline-flex">
+                        <i class="far fa-folder"></i>
+                    </div>
+                    Sản phẩm
+                </a>
+                <i class="arrow fas fa-angle-down"></i>
+                <ul class="sub-menu">
+                    <li><a href="?mod=product&action=add">Thêm mới</a></li>
+                    <li><a href="?mod=product&action=getList">Danh sách</a></li>
+                </ul>
+            </li>
+            <li class="nav-link">
                 <a href="?mod=product&action=list_product">
                     <div class="nav-link-icon d-inline-flex">
                         <i class="far fa-folder"></i>

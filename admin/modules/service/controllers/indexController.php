@@ -161,7 +161,7 @@ function getListAction()
         //phân trang list_pages
         $search = $_POST['search'];
         //phân trang list_pages
-        $num_rows = db_num_rows("SELECT * FROM `tbl_customer` WHERE `title` LIKE '%$search%' OR `name` LIKE '%$search%'");
+        $num_rows = db_num_rows("SELECT * FROM `tbl_service` WHERE `title` LIKE '%$search%' OR `name` LIKE '%$search%'");
         $num_per_page = 10;
         //Tổng số bản ghi
         $total_row  =  $num_rows;
