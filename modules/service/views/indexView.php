@@ -180,50 +180,41 @@
 <section id="integration" class="integration-area integration-2 pt-120 pb-90">
     <div class="container-fluid p-0">
         <div class="row align-items-center justify-content-lg-end gx-xl-5">
-            <div class="col-lg-6 left-content">
-                <div class="section-title">
-                    <h2 class="title">Thiết Kế Chuẩn SEO</h2>
-                    <p>Wind Lập Trình đặt sự chú trọng vào việc thiết kế trang web theo các tiêu chuẩn SEO hàng đầu, từ cấu trúc trang đến tối ưu hóa từ khóa. Điều này giúp trang web của bạn dễ dàng được tìm thấy trên các công cụ tìm kiếm và thu hút lượng lớn người truy cập mục tiêu, tăng cơ hội tiếp cận và tăng doanh số bán hàng của bạn.</p>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-12 col-sm-6">
-                        <div class="item-single mb-30">
-                            <div class="icon">
-                                <i class="far fa-check"></i>
-                            </div>
-                            <div class="content">
-                                <p>Chúng tôi tập trung vào tối ưu hóa tốc độ tải trang, đảm bảo trải nghiệm người dùng tốt và điểm cao trong các bảng xếp hạng công cụ tìm kiếm.</p>
-                            </div>
+            <?php foreach ($getServiceWebsite as $item) {
+                if ($item['section'] == 'website' && $item['category'] == 'seo') {
+            ?> <div class="col-lg-6 left-content">
+                        <div class="section-title">
+                            <h2 class="name"><?php echo $item['name'] ?></h2>
+                            <p><?php echo $item['content'] ?></p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <?php foreach ($getContentServiceWeb as $itemContent) {
+                                if (($item['category'] == 'seo' && $itemContent['category'] == 'seo') && ($item['section'] == 'website' && $itemContent['section'] == 'website')) {
+                            ?>
+                                    <div class="col-lg-12 col-sm-6">
+                                        <div class="item-single mb-30">
+                                            <div class="icon">
+                                                <i class="<?php echo $itemContent['icon'] ?>"></i>
+                                            </div>
+                                            <div class="content">
+                                                <p><?php echo $itemContent['content'] ?></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <?php } ?>
+                            <?php } ?>
+
                         </div>
                     </div>
-                    <div class="col-lg-12 col-sm-6">
-                        <div class="item-single mb-30">
-                            <div class="icon">
-                                <i class="far fa-check"></i>
-                            </div>
-                            <div class="content">
-                                <p>Tối ưu hóa từ khóa và Meta Tags. Chúng tôi tùy chỉnh từ khóa và meta tags để tối ưu hóa sự xuất hiện của trang web của bạn trên các trang kết quả tìm kiếm, tăng khả năng thu hút lượng lớn người truy cập mục tiêu.</p>
-                            </div>
+                    <div class="col-lg-6 -content">
+                        <div class="image mb-30">
+                            <img src="public/images/service/<?php echo $item['image'] ?>" alt="integration Image">
                         </div>
                     </div>
-                    <div class="col-lg-12 col-sm-6">
-                        <div class="item-single mb-30">
-                            <div class="icon">
-                                <i class="far fa-check"></i>
-                            </div>
-                            <div class="content">
-                                <p>Cấu trúc trang Web tối ưu. Chúng tôi tối ưu hóa cấu trúc trang web để đảm bảo sự dễ dàng trong việc tìm kiếm và đánh giá của các công cụ tìm kiếm.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 -content">
-                <div class="image mb-30">
-                    <img src="public/images/service/web_4.png" alt="integration Image">
-                </div>
-            </div>
         </div>
+    <?php } ?>
+<?php } ?>
     </div>
 </section>
 <!-- End Integration Area -->

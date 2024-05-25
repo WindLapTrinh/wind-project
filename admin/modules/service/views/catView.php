@@ -32,6 +32,10 @@ get_sidebar();
                                 <label for="category">Loại content</label>
                                 <input class="form-control" type="category" name="category" id="category">
                             </div>
+                            <div class="form-group">
+                                <label for="style">Style</label>
+                                <input class="form-control" type="style" name="style" id="style">
+                            </div>
 
                             <button type="submit" name="btn-add" class="btn btn-primary">Thêm mới</button>
                         </form>

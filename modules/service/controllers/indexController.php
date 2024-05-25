@@ -15,11 +15,18 @@ function indexAction()
 }
 function softwareAction()
 {
+    $getServiceSoftware = getServiceSoftware();
+    $getContentServiceSoftware = getContentServiceSoftware();
+    $data['getServiceSoftware'] = $getServiceSoftware;
+    $data['getContentServiceSoftware'] = $getContentServiceSoftware;
     //    show_array($list_users);
-    load_view('software');
+    load_view('software', $data);
 }
 function zaloAction()
 {
-    //    show_array($list_users);
-    load_view('zalo');
+    $getServiceZalo = getServiceZalo();
+    $getContentServiceZalo = getContentServiceZalo();
+    $data['getServiceZalo'] = $getServiceZalo;
+    $data['getContentServiceZalo'] = $getContentServiceZalo;
+    load_view('zalo', $data);
 }

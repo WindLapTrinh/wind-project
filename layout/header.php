@@ -93,11 +93,9 @@
                                             <a href="?mod=product&action=zalo" class="nav-link">Thiết kế mini app trên điện thoại</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="coming-soon.html" class="nav-link">Sản phẩm mới</a>
+                                            <a href="?mod=error&action=index" class="nav-link">Sản phẩm mới</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a href="404-error.html" class="nav-link">404 Error</a>
-                                        </li>
+                                        
                                     </ul>
                                 </li>
                                 <li class="nav-item">
@@ -113,13 +111,10 @@
                                             <a href="dich-vu/zalo-mini-app.html" class="nav-link">Dịch vụ Mini App</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="coming-soon.html" class="nav-link">SEO top Google</a>
+                                            <a href="?mod=error&action=index" class="nav-link">SEO top Google</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="coming-soon.html" class="nav-link">Sản phẩm mới</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="?mod=error&action=index" class="nav-link">404 Error</a>
+                                            <a href="?mod=error&action=index" class="nav-link">Sản phẩm mới</a>
                                         </li>
                                     </ul>
                                 </li>

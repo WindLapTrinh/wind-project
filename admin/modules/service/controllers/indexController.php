@@ -26,6 +26,8 @@ function addAction()
         $section = isset($_POST['section']) ? $_POST['section'] : '';
         $service = isset($_POST['service']) ? $_POST['service'] : '';
         $category = isset($_POST['category']) ? $_POST['category'] : '';
+        $style = isset($_POST['style']) ? $_POST['style'] : '';
+
 
         // Xử lý upload ảnh đại diện
         if ($_FILES['file']['error'] === UPLOAD_ERR_OK) {
@@ -53,10 +55,11 @@ function addAction()
                 'image' => isset($image) ? $image : "",
                 'section' => $section,
                 'service' => $service,
-                'category' => $category
+                'category' => $category,
+                'style' =>$style
             );
             Add($data);
-            redirect("?mod=secvice&action=getList");
+            redirect("?mod=service&action=getList");
         }
     }
     load_view('index');
@@ -256,6 +259,8 @@ function catAction()
         $icon = isset($_POST['icon']) ? $_POST['icon'] : '';
         $section = isset($_POST['section']) ? $_POST['section'] : '';
         $category = isset($_POST['category']) ? $_POST['category'] : '';
+        $style = isset($_POST['style']) ? $_POST['style'] : '';
+
 
 
         // Kiểm tra và xử lý lỗi
@@ -265,7 +270,9 @@ function catAction()
                 'content' => $content,
                 'icon' => $icon,
                 'section' => $section,
-                'category' => $category
+                'category' => $category,
+                'style' => $style
+
             );
             addCat($data);
             redirect("?mod=service&action=cat");

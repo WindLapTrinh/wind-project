@@ -38,7 +38,11 @@ get_sidebar();
                     <div class="form-group">
                         <label for="note">Ghi chú</label>
                         <input class="form-control" type="text" name="note" id="note">
-                    </div>  
+                    </div> 
+                    <div class="form-group">
+                        <label for="style">Style</label>
+                        <input class="form-control" type="style" name="style" id="style">
+                    </div> 
                               
                     <div class="form-group">
                         <label for="logo">Ảnh dịch vụ</label>

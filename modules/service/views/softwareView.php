@@ -92,40 +92,44 @@
 <!-- Start About Area -->
 <section id="about" class="about-area pt-120 pb-90">
     <div class="container">
-        <div class="row align-items-center gx-xl-5">
-            <div class="col-lg-7">
-                <div class="image image-left mb-30">
-                    <img src="public/images/sofware/sofware_4.jpg" alt="about Image">
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="section-title">
-                    <h2 class="title">Giải Pháp Phần Mềm Thống Kê Doanh Thu Tối Ưu</h2>
-                    <p>Wind Lập Trình cung cấp phần mềm thống kê doanh thu tiên tiến, giúp doanh nghiệp phân tích và quản lý doanh thu một cách hiệu quả, từ việc thu thập dữ liệu đến đưa ra các báo cáo chi tiết và phân tích định kỳ.</p>
-                </div>
-                <div class="item-single mb-30">
-                    <div class="icon">
-                        <i class="fal fa-webcam"></i>
+        <?php foreach ($getServiceSoftware as $item) {
+            if ($item['section'] == 'software' && $item['category'] == 'solution') {
+        ?>
+                <div class="row align-items-center gx-xl-5">
+                    <div class="col-lg-7">
+                        <div class="image image-left mb-30">
+                            <img src="public/images/sofware/<?php echo $item['image'] ?>" alt="about Image">
+                        </div>
                     </div>
-                    <div class="content">
-                        <h3>Hiệu Quả</h3>
-                        <p>Giúp doanh nghiệp thu thập, phân tích và hiểu rõ hơn về các chỉ số doanh thu từ các nguồn khác nhau, từ đó đưa ra những quyết định kinh doanh chính xác và hiệu quả hơn.</p>
+                    <div class="col-lg-5">
+                        <div class="section-title">
+                            <h2 class="name"><?php echo $item['name'] ?></h2>
+                            <p><?php echo $item['content'] ?></p>
+                        </div>
+                        <?php foreach ($getContentServiceSoftware as $itemContent) {
+                            if (($item['category'] == 'solution' && $itemContent['category'] == 'solution') && ($item['section'] == 'software' && $itemContent['section'] == 'software')) {
+                        ?>
+                                <div class="item-single mb-30">
+                                    <div class="icon">
+                                        <i class="<?php echo $itemContent['icon'] ?>"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h3><?php echo $itemContent['name'] ?></h3>
+                                        <p><?php echo $itemContent['content'] ?></p>
+                                    </div>
+                                </div>
+                            <?php }  ?>
+                        <?php }  ?>
+
+
+                        <div class="cta-btns mb-30">
+                            <a href="contact.html" class="btn secondary-btn secondary-btn-2">Giửi Tin Nhắn</a>
+                        </div>
                     </div>
                 </div>
-                <div class="item-single mb-30">
-                    <div class="icon">
-                        <i class="fal fa-images"></i>
-                    </div>
-                    <div class="content">
-                        <h3>Linh Hoạt</h3>
-                        <p>Phù hợp với mọi loại doanh nghiệp và ngành nghề, cung cấp các tính năng linh hoạt và tùy chỉnh để đáp ứng đầy đủ nhu cầu cụ thể của từng tổ chức.</p>
-                    </div>
-                </div>
-                <div class="cta-btns mb-30">
-                    <a href="contact.html" class="btn secondary-btn secondary-btn-2">Giửi Tin Nhắn</a>
-                </div>
-            </div>
-        </div>
+            <?php } ?>
+        <?php } ?>
+
     </div>
 </section>
 <!-- End About Area -->
@@ -134,49 +138,41 @@
 <section id="integration" class="integration-area integration-2 pt-120 pb-90">
     <div class="container-fluid p-0">
         <div class="row align-items-center justify-content-lg-end gx-xl-5">
-            <div class="col-lg-6 left-content">
-                <div class="section-title">
-                    <h2 class="title">Đạt Đỉnh Cao Doanh Thu với Phần Mềm Phân Tích Sâu</h2>
-                    <p> Phần mềm kết hợp và phân tích dữ liệu từ nhiều nguồn khác nhau, từ doanh thu bán hàng đến dữ liệu khách hàng, giúp đưa ra những thông tin chi tiết và toàn diện. Sử dụng công nghệ AI và machine learning để phân tích mẫu, dự đoán xu hướng và đề xuất các chiến lược tối ưu cho doanh thu tăng trưởng.</p>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-12 col-sm-6">
-                        <div class="item-single mb-30">
-                            <div class="icon">
-                                <i class="far fa-check"></i>
-                            </div>
-                            <div class="content">
-                                <p>Phần mềm cung cấp thông tin chi tiết và phân tích sâu về hiệu suất kinh doanh, từ đó giúp doanh nghiệp điều chỉnh và tối ưu hóa chiến lược kinh doanh để tăng cường doanh thu.</p>
-                            </div>
+            <?php foreach ($getServiceSoftware as $item) {
+                if ($item['section'] == 'software' && $item['category'] == 'analysis') {
+            ?>
+                    <div class="col-lg-6 left-content">
+                        <div class="section-title">
+                            <h2 class="name"><?php echo $item['name'] ?></h2>
+                            <p><?php echo $item['content'] ?></p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <?php foreach ($getContentServiceSoftware as $itemContent) {
+                                if (($item['section'] == 'software' && $itemContent['section'] == 'software') && ($item['category'] == 'analysis' && $itemContent['category'] == 'analysis')) {
+                            ?>
+                                    <div class="col-lg-12 col-sm-6">
+                                        <div class="item-single mb-30">
+                                            <div class="icon">
+                                                <i class="<?php echo $itemContent['icon'] ?>"></i>
+                                            </div>
+                                            <div class="content">
+                                                <p><?php echo $itemContent['content'] ?></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                            <?php } ?>
+
                         </div>
                     </div>
-                    <div class="col-lg-12 col-sm-6">
-                        <div class="item-single mb-30">
-                            <div class="icon">
-                                <i class="far fa-check"></i>
-                            </div>
-                            <div class="content">
-                                <p>Sử dụng dữ liệu lịch sử và phân tích dữ liệu trực tiếp từ thị trường, phần mềm có khả năng dự đoán các xu hướng và biến động trong tương lai, giúp doanh nghiệp chuẩn bị kế hoạch phản ứng linh hoạt và kịp thời.</p>
-                            </div>
+                    <div class="col-lg-6 right-content">
+                        <div class="image mb-30">
+                            <img src="public/images/sofware/<?php echo $item['image'] ?>" alt="integration Image">
                         </div>
                     </div>
-                    <div class="col-lg-12 col-sm-6">
-                        <div class="item-single mb-30">
-                            <div class="icon">
-                                <i class="far fa-check"></i>
-                            </div>
-                            <div class="content">
-                                <p>Phần mềm cung cấp thông tin phân tích về hiệu suất của các chiến dịch marketing, giúp doanh nghiệp điều chỉnh và tối ưu hóa chiến lược quảng cáo để tăng cường hiệu quả và doanh thu.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 right-content">
-                <div class="image mb-30">
-                    <img src="public/images/sofware/sofware_5.jpg" alt="integration Image">
-                </div>
-            </div>
+                <?php } ?>
+            <?php } ?>
+
         </div>
     </div>
 </section>
@@ -186,55 +182,44 @@
 <section id="choose" class="choose-area choose-2">
     <div class="container">
         <div class="row align-items-center gx-xl-5">
-            <div class="col-lg-5">
-                <div class="section-title">
-                    <span class="tag">Wind Lập Trình</span>
-                    <h2 class="title">Phần Mềm Quản Lý Nhân Lực</h2>
-                    <p> Tạo cơ sở dữ liệu toàn diện về nhân sự, bao gồm thông tin cá nhân, lịch sử công việc, bảo hiểm, và các thông tin liên quan khác để quản lý dễ dàng và hiệu quả hơn. Tự động hóa các quy trình như tuyển dụng, đào tạo, và đánh giá hiệu suất nhân viên, giúp tiết kiệm thời gian và công sức của cả nhân sự và quản lý.  Cung cấp các công cụ phân tích thông minh để đánh giá hiệu suất nhân viên, dự báo nhu cầu nhân sự, và tối ưu hóa phân bổ nguồn lực.</p>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-12 col-sm-6">
-                        <div class="item-single mb-30">
-                            <div class="icon blue bg-blue">
-                                <i class="fal fa-columns"></i>
-                            </div>
-                            <div class="content">
-                                <h3>Tích Hợp Giao Diện Người Dùng Thân Thiện</h3>
-                                <p>Phần mềm cung cấp giao diện người dùng trực quan và dễ sử dụng, giúp nhân viên và quản lý tương tác với hệ thống một cách thuận tiện và linh hoạt.</p>
+            <?php foreach ($getServiceSoftware as $item) {
+                if ($item['section'] == 'software' && $item['category'] == 'manager') {
+            ?>
+                    <div class="col-lg-5">
+                        <div class="section-title">
+                            <span class="tag"><?php echo $item['note'] ?></span>
+                            <h2 class="name"><?php echo $item['name'] ?></h2>
+                            <p><?php echo $item['content'] ?></p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <?php foreach ($getContentServiceSoftware as $itemContent) { 
+                                if(($item['section'] == $itemContent['section'] ) && ($item['category'] == $itemContent['category'])){
+                            ?>
+                                <div class="col-md-12 col-sm-6">
+                                    <div class="item-single mb-30">
+                                        <div class="icon blue bg-blue">
+                                            <i class="<?php echo $itemContent['icon'] ?>"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h3><?php echo $itemContent['name'] ?></h3>
+                                            <p><?php echo $itemContent['content'] ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php } ?>
+                                
+                            <?php } ?>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="image image-right mb-30">
+                            <div class="lazy-container aspect-ratio aspect-ratio-4-3">
+                                <img class="lazyload lazy-image" src="public/images/sofware/<?php echo $item['image'] ?>" data-src="public/images/sofware/<?php echo $item['image'] ?>" alt="Choose Image">
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12 col-sm-6">
-                        <div class="item-single mb-30">
-                            <div class="icon green bg-green">
-                                <i class="fal fa-comments"></i>
-                            </div>
-                            <div class="content">
-                                <h3>Quản Lý Thông Tin và Chính Sách Nhân Sự</h3>
-                                <p>Tạo và quản lý các chính sách nhân sự, hợp đồng lao động, và các tài liệu liên quan một cách dễ dàng và có tổ chức.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-sm-6">
-                        <div class="item-single mb-30">
-                            <div class="icon red bg-red">
-                                <i class="fal fa-sync-alt"></i>
-                            </div>
-                            <div class="content">
-                                <h3>Bảo Mật Thông Tin Nhân Sự</h3>
-                                <p>Đảm bảo an toàn và bảo mật cho dữ liệu nhân sự với các tính năng bảo mật tiên tiến như mã hóa dữ liệu và quản lý quyền truy cập.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <div class="image image-right mb-30">
-                    <div class="lazy-container aspect-ratio aspect-ratio-4-3">
-                        <img class="lazyload lazy-image" src="public/images/sofware/sofware_6.jpg" data-src="public/images/sofware/sofware_6.jpg" alt="Choose Image">
-                    </div>
-                </div>
-            </div>
+                <?php } ?>
+            <?php } ?>
         </div>
     </div>
     <!-- Bg Shape -->
