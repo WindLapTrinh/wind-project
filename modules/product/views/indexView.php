@@ -33,7 +33,7 @@
                                     <article class="item-single mb-30">
                                         <div class="image">
                                             <a href="blog-details.html" class="lazy-container aspect-ratio">
-                                                <img class="lazyload lazy-image" src="public/images/service/<?php echo $item['image'] ?>" data-src="public/images/service/<?php echo $item['image'] ?>" alt="Blog Image">
+                                                <img class="lazyload lazy-image" src="public/images/product/<?php echo $item['image'] ?>" data-src="public/images/product/<?php echo $item['image'] ?>" alt="Blog Image">
                                             </a>
                                         </div>
                                         <div class="content">

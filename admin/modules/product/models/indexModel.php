@@ -4,6 +4,13 @@ function Add($data)
 {
     return db_insert('tbl_product', $data);
 }
+function Update($id, $data){
+    return db_update('tbl_product', $data, "`id` = '{$id}'");
+}
+
+function Delete($id){
+    return db_delete('tbl_product', "`id` = '{$id}'");
+}
 
 function getList($start = 1, $num_per_page = 5, $where = "")
 {
@@ -13,6 +20,13 @@ function getList($start = 1, $num_per_page = 5, $where = "")
     $getList = db_fetch_array("SELECT * FROM `tbl_product` {$where} LIMIT {$start}, $num_per_page");
     return $getList;
 }
+
+function getListId($id){
+    $item = db_fetch_row("SELECT * FROM `tbl_product` WHERE `id`= '{$id}'");
+    if (!empty($item))
+        return $item;
+}
+
 function getListSearch($search){
     $item = db_fetch_array("SELECT * FROM `tbl_product` WHERE `content` LIKE '%$search%' OR `name` LIKE '%$search%'");
     if (!empty($item))
