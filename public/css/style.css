@@ -71,14 +71,16 @@ body {
   line-height: 1.8;
   overflow-x: hidden;
 }
+h1{
+  color: white;
+  font-weight: 700;
 
-.h1,
+}
 .h2,
 .h3,
 .h4,
 .h5,
 .h6,
-h1,
 h2,
 h3,
 h4,
@@ -4741,8 +4743,8 @@ p {
   padding: 190px 0 120px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(../images/service/anh_1.jpg);
+  background-image: url(../images/banner/banner_wind_1.jpg);
+  height: 600px;
 }
 
 .page-title-area ul {

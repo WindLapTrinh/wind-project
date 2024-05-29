@@ -87,10 +87,10 @@
                                             <a href="san-pham/thiet-ke-web.html" class="nav-link">Thiết kế website</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="testimonial.html" class="nav-link">Thiết kế phần mềm</a>
+                                            <a href="?mod=error&action=index" class="nav-link">Thiết kế phần mềm</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="?mod=product&action=zalo" class="nav-link">Thiết kế mini app trên điện thoại</a>
+                                            <a href="?mod=error&action=index" class="nav-link">Thiết kế mini app trên điện thoại</a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="?mod=error&action=index" class="nav-link">Sản phẩm mới</a>

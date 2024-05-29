@@ -1083,6 +1083,8 @@
   }
   .page-title-area {
     padding: 60px 0;
+    height: auto;
+
   }
   .go-top {
     width: 40px;

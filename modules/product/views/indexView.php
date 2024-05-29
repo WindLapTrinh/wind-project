@@ -4,11 +4,11 @@
 <div class="page-title-area">
     <div class="container">
         <div class="content text-center">
-            <h1>Blog Details</h1>
+            <h1>ĐỘI NGŨ LẬP TRÌNH GEN Z</h1>
             <ul class="list-unstyled">
-                <li class="d-inline"><a href="index.html">Home</a></li>
+                <li class="d-inline"><a href="index.html">Liên hệ</a></li>
                 <li class="d-inline">/</li>
-                <li class="d-inline active">Blog Details</li>
+                <li class="d-inline active">Wind Lập Trình</li>
 
             </ul>
         </div>
@@ -57,9 +57,15 @@
                 </div>
                 <!-- end  -->
             </div>
-
+        </div>
+        <div class="pagination mb-30">
+            <a href="#" class="page-numbers"><i class="fas fa-angle-left"></i></a>
+            <span class="page-numbers current" aria-current="page">1</span>
+            <a href="#" class="page-numbers">2</a>
+            <a href="#" class="page-numbers"><i class="fas fa-angle-right"></i></a>
         </div>
     </div>
+
 </div>
 <!-- End Blog Details Area -->
 

@@ -7,7 +7,7 @@
                         <div class="footer-widget">
                             <div class="navbar-brand">
                                 <a href="index.html">
-                                    <img src="public/images/logo/logo-2.png" alt="Logo" />
+                                    <img src="public/images/logo/wind.png" alt="Logo" />
                                 </a>
                             </div>
                             <p>Wind Lập Trình là địa chỉ tin cậy cho các dịch vụ lập trình và giải pháp công nghệ tại Việt Nam. Chúng tôi cung cấp các giải pháp đa dạng từ đào tạo lập trình đến phát triển ứng dụng cho doanh nghiệp.</p>
