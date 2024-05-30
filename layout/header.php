@@ -125,7 +125,7 @@
                                             <a href="?mod=news&action=index" class="nav-link">Về chúng tôi</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="?mod=news&action=project" class="nav-link">Dự án</a>
+                                            <a href="?mod=news&action=project" class="nav-link">Blog công nghệ</a>
                                         </li>
                                     </ul>
                                 </li>
