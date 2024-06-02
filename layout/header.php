@@ -129,10 +129,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="?mod=contact&action=index" class="nav-link">Liên hệ</a>
-                                </li>
-                                <li class="nav-item">
+                                 <li class="nav-item">
                                     <a href="?mod=price&action=index" class="nav-link">Bảng giá </a>
                                 </li>
                                 <li class="cta-btn">

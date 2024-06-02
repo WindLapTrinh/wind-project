@@ -73,9 +73,8 @@
                 </a>
                 <i class="arrow fas fa-angle-down"></i>
                 <ul class="sub-menu">
-                    <li><a href="?mod=product&action=add">Thêm mới</a></li>
-                    <li><a href="?mod=product&action=list_product">Danh sách</a></li>
-                    <li><a href="?mod=product&action=cat">Danh mục</a></li>
+                    <li><a href="?mod=news&action=add">Thêm mới</a></li>
+                    <li><a href="?mod=news&action=getList">Danh sách</a></li>
                 </ul>
             </li>
             <li class="nav-link">

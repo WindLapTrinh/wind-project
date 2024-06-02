@@ -4,8 +4,12 @@ function construct() {
         load_model('index');
     }
     function indexAction() {
-    //    show_array($list_users);
-        load_view('index');
+        $getList = getList();
+        $getListProduct = getListProduct();
+
+        $data['getListProduct'] = $getListProduct;
+        $data['getList'] = $getList;
+        load_view('index', $data);
     }
     function projectAction(){
         load_view('project');

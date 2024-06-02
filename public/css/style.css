@@ -455,7 +455,10 @@ p {
   border-radius: 5px;
   color: #132150;
 }
-
+.navbar{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
 @media screen and (min-width: 1400px) {
   .container {
     max-width: 1140px;
@@ -518,7 +521,6 @@ p {
 
 .header-area .main-navbar-area .main-nav .navbar {
   position: inherit;
-  padding: 20px 0;
 }
 
 .header-area .main-navbar-area .main-nav .navbar .navbar-brand {
@@ -4745,6 +4747,7 @@ p {
   background-repeat: no-repeat;
   background-image: url(../images/banner/banner_wind_1.jpg);
   height: 600px;
+  margin-top: 130px !important;
 }
 
 .page-title-area ul {
@@ -5211,6 +5214,15 @@ Lazyload CSS
 .lazyloaded.blur-up {
   -webkit-filter: blur(0);
           filter: blur(0);
+}
+.nav-link{
+  color: #000000 !important;
+}
+.nav-link:hover{
+  color: #0f88d8 !important;
+}
+.main-nav{
+  background-color: #ffffff !important;
 }
 
 /* -----------------------------------------

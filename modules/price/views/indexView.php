@@ -6,8 +6,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <div class="banner-content mb-30">
-                        <h1 class="title">Effortlessly Manages All Your Information</h1>
-                        <p class="text">Samu lets you manage software development and track bugs. Samu streamlined design is built for speed.</p>
+                        <h1 class="title">Chúng tôi nhận thiết kế gia công sản phẩm theo yêu cầu của khách hàng</h1>
+                        <p class="text">Áp dụng công nghệ hoàn toàn mới, giao diện chuẩn SEO google, sản phẩm độc đáo, sáng tạo, mới lạ.</p>
                         <div class="cta-btns">
                             <a href="contact.html" class="btn primary-btn primary-btn-7">Download Now</a>
                             <a href="404-error.html" class="btn secondary-btn secondary-btn-3">App Features</a>
@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="banner-image image-right mb-30">
-                        <img src="public/images/banner/banner-7.png" class="shadow-none" alt="Banner Image">
+                        <img src="public/images/price/price_1.png" class="shadow-none" alt="Banner Image">
                     </div>
                 </div>
             </div>

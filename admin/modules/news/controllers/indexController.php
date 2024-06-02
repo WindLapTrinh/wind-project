@@ -1,13 +1,15 @@
 <?php
 #method
+
 function construct()
 {
     load('lib', 'valitation');
     load_model('index');
 }
+
 #end method
 
-#event product 
+#event
 function addAction()
 {
     if (isset($_POST['btn-add'])) {
@@ -18,6 +20,10 @@ function addAction()
         $customer = isset($_POST['customer']) ? $_POST['customer'] : '';
         $startDay = isset($_POST['startDay']) ? $_POST['startDay'] : '';
         $content = isset($_POST['content']) ? $_POST['content'] : '';
+        $note = isset($_POST['note']) ? $_POST['note'] : '';
+        $content_new = isset($_POST['content_new']) ? $_POST['content_new'] : '';
+        $video = isset($_POST['video']) ? $_POST['video'] : '';
+        $address = isset($_POST['address']) ? $_POST['address'] : '';
         $file = isset($_POST['file']) ? $_POST['file'] : '';
         $section = isset($_POST['section']) ? $_POST['section'] : '';
 
@@ -45,13 +51,18 @@ function addAction()
                 'startDay' => $startDay,
                 'image' => isset($image) ? $image : "",
                 'section' => $section,
-                'content' => $content
+                'content' => $content,
+                'note' => $note,
+                'content_new' => $content_new,
+                'address' => $address,
+                'video' => $video
+
             );
             Add($data);
-            redirect("?mod=product&action=getList");
+            redirect("?mod=news&action=getList");
         }
     }
-    load_view('index');
+    load_view('index', $data);
 }
 
 function updateAction()
@@ -143,7 +154,7 @@ function deleteAction(){
     $id = $_GET['id'];
     echo $id;
     Delete($id);
-    redirect("?mod=product&action=getList");
+    redirect("?mod=news&action=getList");
 }
 
 function getListAction()
@@ -152,7 +163,7 @@ function getListAction()
         //phân trang list_pages
         $search = $_POST['search'];
         //phân trang list_pages
-        $num_rows = db_num_rows("SELECT * FROM `tbl_product` WHERE `content` LIKE '%$search%' OR `name` LIKE '%$search%'");
+        $num_rows = db_num_rows("SELECT * FROM `tbl_new_we` WHERE `content` LIKE '%$search%' OR `name` LIKE '%$search%'");
         $num_per_page = 10;
         //Tổng số bản ghi
         $total_row  =  $num_rows;
@@ -171,7 +182,7 @@ function getListAction()
         $data['getList'] = $getList;
     } else {
         //phân trang list_pages
-        $num_rows = db_num_rows("SELECT * FROM `tbl_product`");
+        $num_rows = db_num_rows("SELECT * FROM `tbl_new_we`");
         $num_per_page = 10;
         //Tổng số bản ghi
         $total_row  =  $num_rows;
@@ -192,6 +203,6 @@ function getListAction()
         $data['getList'] = $getList;
     }
     //show_array($data);
-    load_view('listProduct', $data);
+    load_view('listNews', $data);
 }
-#end event product
+#endevent
