@@ -408,23 +408,23 @@ p {
 }
 
 .secondary-btn.secondary-btn-2 {
-  color: #2dca73;
-  background-color: #e1ffee;
+  color: #ffffff;
+  background-color: #4f5eff;
 }
 
 .secondary-btn.secondary-btn-2:hover {
   color: #ffffff;
-  background-color: #2dca73;
+  background-color: #1573df;
 }
 
 .secondary-btn.secondary-btn-3 {
-  color: #0fd8d0;
-  background-color: #e3fffe;
+  color: #ffffff;
+  background-color: #1573df;
 }
 
 .secondary-btn.secondary-btn-3:hover {
   color: #ffffff;
-  background-color: #0fd8d0;
+  background-color: #0f48d8;
 }
 
 /* Form CSS */
@@ -895,7 +895,7 @@ p {
 .header-area.header-6 .main-navbar-area.is-sticky .secondary-btn {
   color: #ffffff;
   background-image: none;
-  background-color: #0f88d8;
+  background-color: #1573df;
 }
 
 .header-area.header-6 .main-navbar-area.is-sticky .secondary-btn:hover {
@@ -2011,7 +2011,7 @@ p {
   border-radius: 50%;
   font-size: 24px;
   color: #ffffff;
-  background-color: #2dca73;
+  background-color: #1573df;
 }
 
 .about-area .item-single .content {
@@ -2066,7 +2066,7 @@ p {
 }
 
 .about-area.about-2 .item-single .icon {
-  background-color: #0fd8d0;
+  background-color: #3a40ff;
 }
 
 .about-area.about-3 .section-title {
