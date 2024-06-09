@@ -6,9 +6,9 @@
                     <div class="col-lg-4 col-md-12">
                         <div class="footer-widget">
                             <div class="navbar-brand">
-                                <a href="index.html">
+                                <!-- <a href="index.html">
                                     <img src="public/images/logo/wind.png" alt="Logo" />
-                                </a>
+                                </a> -->
                             </div>
                             <p>Wind Lập Trình là địa chỉ tin cậy cho các dịch vụ lập trình và giải pháp công nghệ tại Việt Nam. Chúng tôi cung cấp các giải pháp đa dạng từ đào tạo lập trình đến phát triển ứng dụng cho doanh nghiệp.</p>
                         </div>
@@ -19,19 +19,19 @@
                         <ul class="footer-links">
                             <li>
                                 <i class="fal fa-angle-right"></i>
-                                <a href="404-error.html">Thiết kế Wesite</a>
+                                <a href="san-pham/thiet-ke-web.html">Thiết kế Wesite</a>
                             </li>
                             <li>
                                 <i class="fal fa-angle-right"></i>
-                                <a href="404-error.html">Thiết kế Phần mềm</a>
+                                <a href="dang-cap-nhap.html">Thiết kế Phần mềm</a>
                             </li>
                             <li>
                                 <i class="fal fa-angle-right"></i>
-                                <a href="services.html">Thiết kế Mini app</a>
+                                <a href="dang-cap-nhap.html">Thiết kế Mini app</a>
                             </li>
                             <li>
                                 <i class="fal fa-angle-right"></i>
-                                <a href="contact.html">Seo top Google</a>
+                                <a href="dang-cap-nhap.html">Seo top Google</a>
                             </li>
                         </ul>
                     </div>
@@ -42,19 +42,19 @@
                         <ul class="footer-links">
                             <li>
                                 <i class="fal fa-angle-right"></i>
-                                <a href="404-error.html">Dịch vụ Website</a>
+                                <a href="dich-vu/website.html">Dịch vụ Website</a>
                             </li>
                             <li>
                                 <i class="fal fa-angle-right"></i>
-                                <a href="pricing.html">Dịch vụ Phần mềm</a>
+                                <a href="dich-vu/pham-mem.html">Dịch vụ Phần mềm</a>
                             </li>
                             <li>
                                 <i class="fal fa-angle-right"></i>
-                                <a href="404-error.html">Dịch vụ Mini App</a>
+                                <a href="dich-vu/zalo-mini-app.html">Dịch vụ Mini App</a>
                             </li>
                             <li>
                                 <i class="fal fa-angle-right"></i>
-                                <a href="blog.html">Sản phẩm mới</a>
+                                <a href="dang-cap-nhap.html">Sản phẩm mới</a>
                             </li>
                         </ul>
                     </div>
@@ -65,20 +65,13 @@
                         <ul class="footer-links">
                             <li>
                                 <i class="fal fa-angle-right"></i>
-                                <a href="404-error.html">Về chúng tôi</a>
+                                <a href="tin-tuc/ve-chung-toi.html">Về chúng tôi</a>
                             </li>
                             <li>
                                 <i class="fal fa-angle-right"></i>
-                                <a href="404-error.html">Dự án</a>
+                                <a href="dang-cap-nhap.html">Blog công nghệ</a>
                             </li>
-                            <li>
-                                <i class="fal fa-angle-right"></i>
-                                <a href="404-error.html">Sản phẩm mới</a>
-                            </li>
-                            <li>
-                                <i class="fal fa-angle-right"></i>
-                                <a href="404-error.html">Đang phát triển</a>
-                            </li>
+                           
                         </ul>
                     </div>
                 </div>

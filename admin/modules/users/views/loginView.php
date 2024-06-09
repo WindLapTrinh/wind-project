@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>sL Code Hub | Store | Login</title>
+  <title>Chào mừng bạn đến với Wind Lập Trình</title>
   <!-- style.css -->
   <link rel="stylesheet" href="public/css/login.css">
   <!-- bootstrap.css -->
@@ -14,63 +14,66 @@
 
 <body>
 
-<div class="container d-flex justify-content-center align-items-center min-vh-100">
-        <div class="row border rounded-5 p-3 shadow box-area">
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="row border rounded-5 p-3 shadow box-area">
 
-            <!-- left -->
-            <dir class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box " style="backdrop-filter: blur(20px);">
-                <div class="featured-image mb-3">
-                    <img src="public/images/banner-login.png" class="img-fluid" style="width: 450px;">
-                </div>
-
-                <p class="text-black fs-2" style="font-family:'Courier New', Courier, monospace;
-                font-weight:600;">sL Code <span style="color: red;">Hub</span>|store</p>
-
-                <small class="text-black text-wrap text-center" style="width: 17rem; font-family:'Courier New', Courier, monospace;">
-                    Join experienced Designers on this platform.</small>
-            </dir>
-
-            <!-- right -->
-
-            <!-- signup box  -->
-            <div class="col-md-6 right-box" id="signUp">
-                <div class="row align-items-center">
-                    <div class="header-text mb-4">
-                        <a href="#" class="d-flex justify-content-center mb-4">
-                            <img src="public/images/logo/wind.png" width="200">
-                        </a>
-                        <div class="text-center m5-5">
-                            <h3 class="fw-bold">Create New Account</h3>
-                            <p class="text-secondary">Get access to account</p>
-                        </div>
-                        <div class="col-12 d-none" id="msgDiv">
-                            <div class="alert alert-danger" role="alert" id="msg"></div>
-                        </div>
-                        <div class="input-group mb-2">
-                            <span class="input-group-text">
-                                <ion-icon name="person-outline"></ion-icon>
-                            </span>
-                            <input type="text" class="form-control form-control-lg fs-6" placeholder="First Name">
-                        </div>
-                       
-                        <div class="input-group mb-2">
-                            <span class="input-group-text">
-                                <ion-icon name="lock-closed-outline"></ion-icon>
-                            </span>
-                            <input type="password" class="form-control form-control-lg fs-6" placeholder="Password">
-                        </div>
-                        
-                        <div class="input-group mb-3">
-                            <button class="btn btn-lg btn-primary w-100 fs-6">Sign Up</button>
-                        </div>
-                        <div class="row">
-                            <small>I have account <a href="#">Login</a></small>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- left -->
+      <dir class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box " style="backdrop-filter: blur(20px);">
+        <div class="featured-image mb-3">
+          <img src="public/images/banner-login.png" class="img-fluid" style="width: 450px;">
         </div>
+
+        <p class="text-white fs-2" style="font-family:'Courier New', Courier, monospace;
+                font-weight:600;"><span style="color: white;">Wind Lập Trình</span></p>
+      </dir>
+
+      <!-- right -->
+
+      <!-- signup box  -->
+      <div class="col-md-6 right-box" id="signUp">
+        <form action="" method="post">
+          <div class="row align-items-center">
+            <div class="header-text mb-4">
+              <a href="#" class="d-flex justify-content-center mb-4">
+                <img src="public/images/logo/wind.png" width="200">
+              </a>
+              <div class="text-center m5-5">
+                <h3 class="fw-bold text-white">Hello. Employee !</h3>
+                <p class="text-secondary">Chúc bạn ngày mới làm việc hiệu quả.</p>
+              </div>
+              <div class="col-12 d-none" id="msgDiv">
+                <div class="alert alert-danger" role="alert" id="msg"></div>
+              </div>
+              <div class="input-group mb-2">
+                <span class="input-group-text">
+                  <ion-icon name="person-outline"></ion-icon>
+                </span>
+                <input type="text" name="username" class="form-control form-control-lg fs-6" placeholder="User Name">
+              </div>
+              <?php echo form_error('username') ?>
+
+              <div class="input-group mb-2">
+                <span class="input-group-text">
+                  <ion-icon name="lock-closed-outline"></ion-icon>
+                </span>
+                <input type="password" name="password" class="form-control form-control-lg fs-6" placeholder="Password">
+              </div>
+              <?php echo form_error('password') ?>
+
+              <div class="input-group mb-3">
+                <button name="btn-login" class="btn btn-lg btn-primary w-100 fs-6">Đăng nhập</button>
+              </div>
+              <?php echo form_error('account')  ?>
+              <div class="row">
+                <small class="text-white">Lấy lại <a href="#">mật khẩu</a></small>
+              </div>
+            </div>
+          </div>
+      </div>
+      </form>
+
     </div>
+  </div>
 
 
   <!-- Ionic -->

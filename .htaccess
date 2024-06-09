@@ -7,6 +7,10 @@ RewriteCond %{REQUEST_URI} \.html$
 #RewriteRule ^dich-vu/([a-zA-Z0-9_-]+)\.html$ index.php?mod=service&controller=index&action=index
 
 
+#trang chủ
+                                     
+RewriteRule ^trangchu.html$ index.php?mod=home&action=home
+
 #Link thân thiện cho dịch vụ
 # dich-vu-phan-mem
 RewriteRule ^dich-vu/phan-mem\.html$ index.php?mod=service&controller=index&action=software
@@ -17,3 +21,18 @@ RewriteRule ^dich-vu/website\.html$ index.php?mod=service&controller=index&actio
 
 #san-pham
 RewriteRule ^san-pham/thiet-ke-web\.html$ index.php?mod=product&controller=index&action=web
+
+RewriteRule ^san-pham/thiet-mini-app\.html$ index.php?mod=product&controller=index&action=zalo
+
+#tin-tuc
+RewriteRule ^tin-tuc/ve-chung-toi\.html$ index.php?mod=news&controller=index&action=index
+
+#bang-gia
+RewriteRule ^bang-gia.html$ index.php?mod=price&controller=index&action=index
+
+#lien-he
+RewriteRule ^lien-he.html$ index.php?mod=contact&controller=index&action=index
+
+#chuc-nang-cap-nhap
+RewriteRule ^dang-cap-nhap.html$ index.php??mod=error&controller=index&action=index
+ 

@@ -44,7 +44,7 @@
                     </div>
                     Dịch vụ
                 </a>
-                <i class="arrow fas fa-angle-down"></i>
+                <i class="arrow fas fa-angle-right"></i>
                 <ul class="sub-menu">
                     <li><a href="?mod=service&action=add">Thêm mới</a></li>
                     <li><a href="?mod=service&action=getList">Danh sách</a></li>
@@ -58,7 +58,7 @@
                     </div>
                     Sản phẩm
                 </a>
-                <i class="arrow fas fa-angle-down"></i>
+                <i class="arrow fas fa-angle-right"></i>
                 <ul class="sub-menu">
                     <li><a href="?mod=product&action=add">Thêm mới</a></li>
                     <li><a href="?mod=product&action=getList">Danh sách</a></li>
@@ -71,7 +71,7 @@
                     </div>
                     Tin tức
                 </a>
-                <i class="arrow fas fa-angle-down"></i>
+                <i class="arrow fas fa-angle-right"></i>
                 <ul class="sub-menu">
                     <li><a href="?mod=news&action=add">Thêm mới</a></li>
                     <li><a href="?mod=news&action=getList">Danh sách</a></li>
@@ -84,7 +84,7 @@
                     </div>
                     Liên hệ
                 </a>
-                <i class="arrow fas fa-angle-down"></i>
+                <i class="arrow fas fa-angle-right"></i>
                 <ul class="sub-menu">
                     <li><a href="?mod=product&action=add">Thêm mới</a></li>
                     <li><a href="?mod=product&action=list_product">Danh sách</a></li>
@@ -98,7 +98,7 @@
                     </div>
                     Bảng giá
                 </a>
-                <i class="arrow fas fa-angle-down"></i>
+                <i class="arrow fas fa-angle-right"></i>
                 <ul class="sub-menu">
                     <li><a href="?mod=price&action=add">Thêm mới</a></li>
                     <li><a href="?mod=price&action=list_price">Danh sách</a></li>
@@ -115,7 +115,7 @@
                 <i class="arrow fas fa-angle-right"></i>
 
                 <ul class="sub-menu">
-                    <li><a href="?view=add-user">Thêm mới</a></li>
+                    <li><a href="?mod=users&act=add">Thêm mới</a></li>
                     <li><a href="?view=list-user">Danh sách</a></li>
                 </ul>
             </li>

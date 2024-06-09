@@ -5,7 +5,6 @@ function construct(){
 }
 function indexAction(){
     if(isset($_POST['btn-add'])){
-        require "config/email.php";
         global $error;
         $error = array();
 
@@ -15,11 +14,8 @@ function indexAction(){
 
         if (empty($error)) {
            SendMail($name, $content, $email);
-        }else{
-            show_array($error);
+           redirect("?mod=home&action=home");
         }
-        show_array($_POST);
     }
-    show_array($_POST);
     load_view('index');
 }

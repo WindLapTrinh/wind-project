@@ -199,70 +199,50 @@
 <!-- End Feedback Area -->
 
 <!-- Start Pricing Plan Area -->
-<section id="pricingPlan" class="pricing-plan-area pricing-plan-3 pt-120 pb-90">
+<div class="blog-details-area pt-120 pb-90">
     <div class="container">
-        <div class="section-title">
-            <div class="icon"><i class="far fa-dollar-sign"></i></div>
-            <h2 class="title">Sản Phẩm New</h2>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-4">
-                <div class="item-single mb-30">
-                    <div class="image">
-                        <img src="public/images/service/anh_3.jpg" alt="Illustration">
-                    </div>
-                    <div class="content">
-                        <span class="price">$25</span>
-                        <span class="type">/MO</span>
-                        <span class="label">Layout Shop bán giày</span>
-                        <ul class="item-list list-unstyled p-0">
-                            <li>Power And Predictive Dialing</li>
-                            <li>Quality & Customer Experience</li>
-                            <li>24/7 phone and email support</li>
-                        </ul>
-                        <a href="pricing.html" class="btn btn-2 primary-btn primary-btn-6">Xem ngay</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="item-single mb-30">
-                    <div class="image">
-                        <img src="public/images/service/anh_4.png" alt="Illustration">
-                    </div>
-                    <div class="content">
-                        <span class="price">$35</span>
-                        <span class="type">/MO</span>
-                        <span class="label">LAYOUT NHÀ HÀNG HIỆN ĐẠI</span>
-                        <ul class="item-list list-unstyled p-0">
-                            <li>Power And Predictive Dialing</li>
-                            <li>Quality & Customer Experience</li>
-                            <li>24/7 phone and email support</li>
-                        </ul>
-                        <a href="pricing.html" class="btn btn-2 primary-btn primary-btn-6">Xem ngay</a>
+        <div class="row justify-content-center gx-xl-5">
+            <div class="col-lg-12">
+                <!-- can lay -->
+                <div class="more-news mb-20">
+
+                    <span class="h2 d-block mb-20">Sản phẩm New</span>
+                    <div class="row">
+                        <?php foreach ($getProductWebsite as $item) {
+                            if ($item['section'] == 'website') {
+                        ?>
+                                <div class="col-md-4">
+                                    <article class="item-single mb-30">
+                                        <div class="image">
+                                            <a href="blog-details.html" class="lazy-container aspect-ratio">
+                                                <img class="lazyload lazy-image" src="public/images/product/<?php echo $item['image'] ?>" data-src="public/images/product/<?php echo $item['image'] ?>" alt="Blog Image">
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <ul class="info-list">
+                                                <li><i class="far fa-calendar-alt"></i> <?php echo $item['startDay'] ?></li>
+                                                <li><i class="fas fa-user"></i> <?php echo $item['customer'] ?></li>
+                                            </ul>
+                                            <h3 class="title m-0">
+                                                <a href="blog-details.html">
+                                                    <?php echo $item['name'] ?>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </article>
+                                </div>
+                            <?php } ?>
+                        <?php } ?>
+
+
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="item-single mb-30">
-                    <div class="image">
-                        <img src="public/images/service/anh_5.png" alt="Illustration">
-                    </div>
-                    <div class="content">
-                        <span class="price">$45</span>
-                        <span class="type">/MO</span>
-                        <span class="label">LAYOUT THƯƠNG MẠI ĐIỆN TỬ</span>
-                        <ul class="item-list list-unstyled p-0">
-                            <li>Power And Predictive Dialing</li>
-                            <li>Quality & Customer Experience</li>
-                            <li>24/7 phone and email support</li>
-                        </ul>
-                        <a href="pricing.html" class="btn btn-2 primary-btn primary-btn-6">Xem ngay</a>
-                    </div>
-                </div>
+                <!-- end  -->
             </div>
         </div>
     </div>
-</section>
+
+</div>
 <!-- End Pricing Plan Area -->
 
 <!-- Start Newsletter Area -->

@@ -1,8 +1,9 @@
 <?php
 function construct()
 {
-    // load('lib', 'valitation');
-    // load_model('index');
+    // load('helper','user');
+    load('lib', 'valitation');
+    load_model('index');
 }
 function indexAction()
 {
@@ -13,7 +14,7 @@ function loginAction()
     //echo time();
    // echo date("d/m/Y");
     global $error, $username, $password;
-    if (isset($_POST['btn_login'])) {
+    if (isset($_POST['btn-login'])) {
         $error = array();
 
         //Kiểm tra username
@@ -43,7 +44,7 @@ function loginAction()
                 $_SESSION['is_login'] = true;
                 $_SESSION['user_login'] = $username;
                 //Chuyển hướng vào hệ thống
-                redirect("?mod=users&action=index");
+                redirect("?mod=home&action=index");
             } else {
                 $error['account'] = "Tên đăng nhập hoặc mật khẩu không hợp lệ";
             }
@@ -179,7 +180,7 @@ function logoutAction()
 {
     unset($_SESSION['is_login']);
     unset($_SESSION['user_login']);
-    redirect("?mod=user&action=login");
+    redirect("?mod=home&action=home");
 }
 
 function list_userAction(){

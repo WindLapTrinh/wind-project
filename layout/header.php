@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="KreativDev">
-    <meta name="description" content="Wind Lập Trình là địa chỉ tin cậy cho các dịch vụ lập trình và giải pháp công nghệ tại Việt Nam. Chúng tôi cung cấp các giải pháp đa dạng từ đào tạo lập trình đến phát triển ứng dụng cho doanh nghiệp.">
+    <meta name="description" content="Wind Lập Trình là nhà phát triển tin cậy cho các dịch vụ lập trình và giải pháp công nghệ tại Việt Nam. Chúng tôi cung cấp các giải pháp đa dạng từ đào tạo lập trình đến phát triển ứng dụng cho doanh nghiệp.">
     <meta name="keywords" content="saas, responsive, premium, retina, resume, jquery, css3, bootstrap">
 
     <!-- Title -->
@@ -77,8 +77,7 @@
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav ms-auto" id="menu">
                                 <li class="nav-item">
-                                    <a href="?mod=home&action=home" class="nav-link toggle active">Trang chủ</a>
-                                    
+                                    <a href="trangchu.html" class="nav-link toggle active">Trang chủ</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="san-pham/thiet-ke-web.html" class="nav-link toggle">Sản phẩm<i class="fal fa-plus"></i></a>
@@ -87,19 +86,19 @@
                                             <a href="san-pham/thiet-ke-web.html" class="nav-link">Thiết kế website</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="?mod=error&action=index" class="nav-link">Thiết kế phần mềm</a>
+                                            <a href="dang-cap-nhap.html" class="nav-link">Thiết kế phần mềm</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="?mod=error&action=index" class="nav-link">Thiết kế mini app trên điện thoại</a>
+                                            <a href="dang-cap-nhap.html" class="nav-link">Thiết kế mini app trên điện thoại</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="?mod=error&action=index" class="nav-link">Sản phẩm mới</a>
+                                            <a href="dang-cap-nhap.html" class="nav-link">Sản phẩm mới</a>
                                         </li>
                                         
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="website.html" class="nav-link toggle">Dịch vụ<i class="fal fa-plus"></i></a>
+                                    <a href="dich-vu/website.html" class="nav-link toggle">Dịch vụ<i class="fal fa-plus"></i></a>
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
                                             <a href="dich-vu/website.html" class="nav-link">Dịch vụ Website</a>
@@ -108,21 +107,21 @@
                                             <a href="dich-vu/phan-mem.html" class="nav-link">Dịch vụ phần mềm</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="dich-vu/zalo-mini-app.html" class="nav-link">Dịch vụ Mini App</a>
+                                            <a href="dang-cap-nhap.html" class="nav-link">Dịch vụ Mini App</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="?mod=error&action=index" class="nav-link">SEO top Google</a>
+                                            <a href="dang-cap-nhap.html" class="nav-link">SEO top Google</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="?mod=error&action=index" class="nav-link">Sản phẩm mới</a>
+                                            <a href="dang-cap-nhap.html" class="nav-link">Sản phẩm mới</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="?mod=news&action=index" class="nav-link toggle">Tin tức<i class="fal fa-plus"></i></a>
+                                    <a href="tin-tuc/ve-chung-toi.html" class="nav-link toggle">Tin tức<i class="fal fa-plus"></i></a>
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
-                                            <a href="?mod=news&action=index" class="nav-link">Về chúng tôi</a>
+                                            <a href="tin-tuc/ve-chung-toi.html" class="nav-link">Về chúng tôi</a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="?mod=news&action=project" class="nav-link">Blog công nghệ</a>
@@ -130,10 +129,10 @@
                                     </ul>
                                 </li>
                                  <li class="nav-item">
-                                    <a href="?mod=price&action=index" class="nav-link">Bảng giá </a>
+                                    <a href="bang-gia.html" class="nav-link">Bảng giá </a>
                                 </li>
                                 <li class="cta-btn">
-                                    <a href="?mod=contact&action=index" class="btn btn-2 secondary-btn">Liên hệ</a>
+                                    <a href="lien-he.html" class="btn btn-2 secondary-btn">Liên hệ</a>
                                 </li>
                             </ul>
                         </div>

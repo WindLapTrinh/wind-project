@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/header.css">
 
-    <title>Admintrator</title>
+    <title>Chào mừng đến với trang quản lý của bạn</title>
 </head>
 
 <body>
@@ -37,8 +37,7 @@
                 </div>
                 <div class="btn-group ">
                     <button type="button" class="btn dropdown-toggle name-login" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                       Wind
-                    <!-- <?php echo $_SESSION['user_login']; ?> -->
+                    <?php echo $_SESSION['user_login']; ?>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right ">
                         <a class="dropdown-item" href="?mod=users&action=add">Tài khoản</a>

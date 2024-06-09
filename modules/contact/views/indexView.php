@@ -1,13 +1,13 @@
-
+<?php get_header() ?>
   <!-- Start Page Title area-->
   <div class="page-title-area">
         <div class="container">
             <div class="content text-center">
-                <h1>Contact us</h1>
+                <h1>Wind Lập Trình</h1>
                 <ul class="list-unstyled">
-                    <li class="d-inline"><a href="index.html">Home</a></li>
+                    <li class="d-inline"><a href="lien-he.html">Liên hệ</a></li>
                     <li class="d-inline">/</li>
-                    <li class="d-inline active">Contact</li>
+                    <li class="d-inline active">Wind</li>
                 </ul>
             </div>
         </div>
@@ -24,8 +24,8 @@
                             <i class="fal fa-phone-plus"></i>
                         </div>
                         <div class="text">
-                            <p><a href="tel:+990123456789">+990 123 456 789</a></p>
-                            <p><a href="tel:+990456123789">+990 456 123 789</a>
+                            <p><a href="tel:+81387799985">+81 387 799 985</a></p>
+                            <p><a href="tel:+81368191416">+81 368 191 416</a>
                         </div>
                     </div>
                 </div>
@@ -35,8 +35,8 @@
                             <i class="fal fa-envelope"></i>
                         </div>
                         <div class="text">
-                            <p><a href="mailTo:hello@example.com">hello@example.com</a></p>
-                            <p><a href="mailTo:info@example.com">info@example.com</a>
+                            <p><a href="mailTo:info.windlaptrinh@gmail.com">info.windlaptrinh@gmail.com</a></p>
+                            <p><a href="mailTo:windlaptrinh.vn@gmail.com">windlaptrinh.vn@gmail.com</a>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                             <i class="fal fa-map-marker-alt"></i>
                         </div>
                         <div class="text">
-                            <p>West Palm Beach, 4669, Travis Street</p>
+                            <p>Tp. Hồ Chí Minh</p>
                         </div>
                     </div>
                 </div>
@@ -57,34 +57,34 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group mb-30">
-                                    <input type="text" name="name" class="form-control" id="name" required data-error="Enter your name" placeholder="Your Name*" />
+                                    <input type="text" name="name" class="form-control" id="name" required data-error="Enter your name" placeholder="nhận tên của bạn...*" />
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-group mb-30">
-                                    <input type="email" name="email" class="form-control" id="email" required data-error="Enter your email" placeholder="Your Email*" />
+                                    <input type="email" name="email" class="form-control" id="email" required data-error="Enter your email" placeholder="nhập email của bạn...*" />
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
 
                             <div class="col-md-12">
                                 <div class="form-group mb-30">
-                                    <textarea name="content" id="content" class="form-control" cols="30" rows="8" required data-error="Please enter your message" placeholder="Your Message..."></textarea>
+                                    <textarea name="content" id="content" class="form-control" cols="30" rows="8" required data-error="Please enter your message" placeholder="nhập nội dung tư vấn..."></textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
 
                             <div class="col-md-12 text-center">
-                                <button type="submit" name="btn-add" class="btn primary-btn primary-btn-5" title="Send message">Send Message</button>
+                                <button type="submit" name="btn-add" class="btn primary-btn primary-btn-5" title="Send message">Xác nhận</button>
                                 <div id="msgSubmit"></div>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="col-lg-6 mb-30">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d57015.866600733796!2d-80.1461976445511!3d26.72868216144084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWest%20Palm%20Beach%2C%204669%2C%20Travis!5e0!3m2!1sen!2sbd!4v1653371634659!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d501726.5407345099!2d106.36556175435443!3d10.754618130150035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529292e8d3dd1%3A0xf15f5aad773c112b!2zVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1717926914293!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -106,7 +106,7 @@
                         <div class="input-group">
                             <input class="form-control" placeholder="Enter Your Email" type="text" name="EMAIL" required="" autocomplete="off">
                             <button class="btn primary-btn primary-btn-6" type="submit">
-                                Submit Now
+                                Xác nhận
                             </button>
                         </div>
                     </form>
@@ -116,4 +116,5 @@
     </div>
 </div>
 <!-- End Newsletter Area -->
+<?php get_footer() ?>
 

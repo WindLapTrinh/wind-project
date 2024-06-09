@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="KreativDev">
-    <meta name="description" content="Samu | Saas & Software HTML Template">
+    <meta name="description" content="Wind Lập Trình là nhà phát triển tin cậy cho các dịch vụ lập trình và giải pháp công nghệ tại Việt Nam. Chúng tôi cung cấp các giải pháp đa dạng từ đào tạo lập trình đến phát triển ứng dụng cho doanh nghiệp.">
     <meta name="keywords" content="saas, responsive, premium, retina, resume, jquery, css3, bootstrap">
 
     <!-- Title -->
-    <title>Samu | Saas & Software HTML Template</title>
+    <title>Thiết kế Website, Phần mềm Wind Lập Trình</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="public/images/logo/favicon.png" type="image/x-icon">
@@ -59,10 +59,10 @@
     <div class="error-area ptb-100">
         <div class="container">
             <div class="error-content">
-                <img src="public/images/404.svg" alt="image" />
+                <img src="public/images/update-function.png" alt="image" />
                 <h3>Trang này đang được cập nhật thông tin!</h3>
                 <p>Wind Lập Trình đang cập nhật và sẽ sớm trở lại với thông tin mới nhất. Hãy quay lại sau để trải nghiệm nội dung mới và cập nhật.</p>
-                <a href="?mod=home&action=home" class="btn primary-btn primary-btn-5">Về Trang Chủ</a>
+                <a href="trang-chu.html" class="btn primary-btn primary-btn-5">Về Trang Chủ</a>
             </div>
         </div>
     </div>
