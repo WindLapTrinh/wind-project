@@ -102,7 +102,7 @@
                 <ul class="sub-menu">
                     <li><a href="?mod=price&action=add">Thêm mới</a></li>
                     <li><a href="?mod=price&action=list_price">Danh sách</a></li>
-                    <li><a href="?mod=price&action=list_price">Danh mục</a></li>
+                    <li><a href="?mod=price&action=addCat">Danh mục</a></li>
                 </ul>
             </li>
             <li class="nav-link">

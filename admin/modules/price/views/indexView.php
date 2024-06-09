@@ -11,11 +11,11 @@ get_sidebar();
             <div class="card-body">
             <form action="" enctype="multipart/form-data" method="POST">
                     <div class="form-group">
-                        <label for="title">Tiêu đề bài viết</label>
-                        <input class="form-control" type="text" name="title" id="title">
+                        <label for="name">Tên bài viết</label>
+                        <input class="form-control" type="text" name="name" id="name">
                     </div>
                     <div class="form-group">
-                        <label for="pcontent">Nội dung bài viết</label>
+                        <label for="content">Nội dung bài viết</label>
                         <textarea name="content" class="form-control" id="content" cols="30" rows="5"></textarea>
                     </div>
                     <div class="form-group">
@@ -23,12 +23,16 @@ get_sidebar();
                         <input class="form-control" type="text" name="icon" id="icon">
                     </div>
                     <div class="form-group">
-                        <label for="comment">Mô tả thể loại</label>
-                        <input class="form-control" type="text" name="comment" id="comment">
+                        <label for="note">Ghi chú</label>
+                        <input class="form-control" type="text" name="note" id="note">
                     </div> 
                     <div class="form-group">
-                        <label for="section">Thể loại</label>
+                        <label for="section">Mô tả thể loại</label>
                         <input class="form-control" type="text" name="section" id="section">
+                    </div> 
+                    <div class="form-group">
+                        <label for="category">Thể loại</label>
+                        <input class="form-control" type="text" name="category" id="category">
                     </div> 
                     <div class="form-group">
                         <label for="file">Ảnh bài viết</label>

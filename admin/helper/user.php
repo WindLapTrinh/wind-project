@@ -1,14 +1,14 @@
 <?php 
-// function check_login($username, $password){
-//     global $list_user;
-//     foreach($list_user as $user){
-//         if($username == $user['username'] && $password == $user['password']){
-//             return true;
-//         }
-//     }
-//     return false;
+function check_login($username, $password){
+    global $list_user;
+    foreach($list_user as $user){
+        if($username == $user['username'] && $password == $user['password']){
+            return true;
+        }
+    }
+    return false;
 
-//}
+}
 
 //Hàm này trả về true nếu tồn tại is_login
 function is_login(){

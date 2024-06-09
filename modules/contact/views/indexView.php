@@ -1,4 +1,3 @@
-<?php get_header() ?>
 
   <!-- Start Page Title area-->
   <div class="page-title-area">
@@ -54,7 +53,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 mb-30">
-                    <form id="contactForm">
+                    <form id="contactForm" action="" enctype="multipart/form-data" method="POST">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group mb-30">
@@ -72,13 +71,13 @@
 
                             <div class="col-md-12">
                                 <div class="form-group mb-30">
-                                    <textarea name="message" id="message" class="form-control" cols="30" rows="8" required data-error="Please enter your message" placeholder="Your Message..."></textarea>
+                                    <textarea name="content" id="content" class="form-control" cols="30" rows="8" required data-error="Please enter your message" placeholder="Your Message..."></textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
 
                             <div class="col-md-12 text-center">
-                                <button type="submit" class="btn primary-btn primary-btn-5" title="Send message">Send Message</button>
+                                <button type="submit" name="btn-add" class="btn primary-btn primary-btn-5" title="Send message">Send Message</button>
                                 <div id="msgSubmit"></div>
                             </div>
                         </div>
@@ -118,4 +117,3 @@
 </div>
 <!-- End Newsletter Area -->
 
-<?php get_footer() ?>

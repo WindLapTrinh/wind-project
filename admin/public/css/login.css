@@ -1,42 +1,16 @@
-body{
-  font-family: Arial, Helvetica, sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
 }
-body{
-  background-color: rgb(49, 49, 185);
+.box-area {
+  background: #0d2460 !important;
 }
-#wp_form{
-  max-width: 960px;
-  margin: 0 auto;
-  text-align: center;
+.right-box {
+  padding: 40px 30px 40px 40px;
 }
-#form_login{
-  background: rgb(213, 213, 159);
-  max-width: 300px;
-  margin: 0 auto;
-  min-height: 200px;
-}
-#form_login .username,
-#form_login .password,
-#form_login .email,
-#form_login .fullname{
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  width: 200px;
-    height: 25px;
-}
-#form_login .checkbox{
-  display: inline-block;
-  margin-bottom: 10px;
-  
-}
-p{
-  display: inline;
-}
-#form_login #btn_login{
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  width: 200px;
-  height: 25px;
+@media only screen and (max-width: 750px) {
+  .featured-image {
+    width: 200px;
+  }
 }
