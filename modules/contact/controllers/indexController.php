@@ -14,8 +14,8 @@ function indexAction(){
 
         if (empty($error)) {
            SendMail($name, $content, $email);
-           redirect("?mod=home&action=home");
         }
+        redirect("trang-chu.html");
     }
     load_view('index');
 }

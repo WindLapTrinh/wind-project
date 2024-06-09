@@ -32,15 +32,14 @@ function SendMail($name, $content, $email)
         
         //Content
         $mail->isHTML(true);
-        $mail->Subject = 'New Contact Form Submission';
-        $mail->Body    = "<h2>Contact Form Submission</h2>
-                          <p><b>Name:</b> {$name}</p>
+        $mail->Subject = "Khách hàng {$name} - {$content}" ;
+        $mail->Body    = "<h2>Nội dung hỗ trợ</h2>
+                          <p><b>Khách hàng:</b> {$name}</p>
                           <p><b>Email:</b> {$email}</p>
-                          <p><b>Message:</b><br>{$content}</p>";
-        $mail->AltBody = "Contact Form Submission\n\nName: {$name}\nEmail: {$email}\nMessage:\n{$content}";
+                          <p><b>Nội dung:</b><br>{$content}</p>";
+        $mail->AltBody = "Thông tin khách hàng\n\nName: {$name}\nEmail: {$email}\nMessage:\n{$content}";
 
         $mail->send();
-        echo 'Message has been sent successfully';
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }

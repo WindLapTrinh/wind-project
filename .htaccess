@@ -9,7 +9,7 @@ RewriteCond %{REQUEST_URI} \.html$
 
 #trang chủ
                                      
-RewriteRule ^trangchu.html$ index.php?mod=home&action=home
+RewriteRule ^trang-chu.html$ index.php?mod=home&action=home
 
 #Link thân thiện cho dịch vụ
 # dich-vu-phan-mem
@@ -34,5 +34,5 @@ RewriteRule ^bang-gia.html$ index.php?mod=price&controller=index&action=index
 RewriteRule ^lien-he.html$ index.php?mod=contact&controller=index&action=index
 
 #chuc-nang-cap-nhap
-RewriteRule ^dang-cap-nhap.html$ index.php??mod=error&controller=index&action=index
+RewriteRule ^dang-cap-nhap.html$ index.php?mod=error&controller=index&action=index
  

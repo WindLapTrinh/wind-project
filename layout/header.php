@@ -16,6 +16,7 @@
     <!-- Base url đường link thân thiện  -->
     <base href="<?php echo base_url() ?>">
     <!-- Bootstrap CSS -->
+    <link href="public/images/logo/wind-contact.png" rel="icon">
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
     <!-- Fontawesome Icon CSS -->
@@ -60,7 +61,7 @@
                 <div class="container">
                     <div class="main-responsive-menu">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="trang-chu.html">
                                 <img src="public/images/logo//wind.png" alt="logo">
                             </a>
                         </div>
@@ -70,14 +71,14 @@
             <div class="main-nav">
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="trang-chu.html">
                             <img class="logo-header" src="public/images/logo/wind.png" alt="Logo">
                             <img class="logo-header" src="public/images/logo/wind.png" alt="Logo">
                         </a>
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav ms-auto" id="menu">
                                 <li class="nav-item">
-                                    <a href="trangchu.html" class="nav-link toggle active">Trang chủ</a>
+                                    <a href="trang-chu.html" class="nav-link toggle active">Trang chủ</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="san-pham/thiet-ke-web.html" class="nav-link toggle">Sản phẩm<i class="fal fa-plus"></i></a>
