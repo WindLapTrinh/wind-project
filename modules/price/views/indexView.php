@@ -10,7 +10,7 @@
                     <p class="text">Áp dụng công nghệ hoàn toàn mới, giao diện chuẩn SEO google, sản phẩm độc đáo, sáng tạo, mới lạ.</p>
                     <div class="cta-btns">
                         <a href="contact.html" class="btn primary-btn">Sản phẩm News</a>
-                        <a href="https://www.youtube.com/watch?v=TVFu4-Kd4oM" class="btn secondary-btn youtube-popup"><i class="fas fa-play-circle"></i>Video Design</a>
+                        <a href="https://www.youtube.com/watch?v=YF6xJzbzaYs&ab_channel=WindLậpTrình" class="btn secondary-btn youtube-popup"><i class="fas fa-play-circle"></i>Video Design</a>
                     </div>
                 </div>
             </div>

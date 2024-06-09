@@ -1065,6 +1065,7 @@ p {
   .header-area .main-navbar-area .main-responsive-nav .logo {
     position: relative;
     z-index: 10;
+    width: 140px !important;
   }
   .header-area .main-navbar-area .main-nav {
     display: none;

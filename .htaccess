@@ -19,6 +19,8 @@ RewriteRule ^dich-vu/zalo-mini-app\.html$ index.php?mod=service&controller=index
 # Áp dụng quy tắc RewriteRule cho các trường hợp khác
 RewriteRule ^dich-vu/website\.html$ index.php?mod=service&controller=index&action=index
 
+RewriteRule ^dich-vu/website\.html$ index.php?mod=service&controller=index&action=seo
+
 #san-pham
 RewriteRule ^san-pham/thiet-ke-web\.html$ index.php?mod=product&controller=index&action=web
 

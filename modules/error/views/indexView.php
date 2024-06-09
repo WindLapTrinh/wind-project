@@ -13,7 +13,7 @@
     <title>Thiết kế Website, Phần mềm Wind Lập Trình</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="public/images/logo/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="public/images/logo/wind-contact.png" type="image/x-icon">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="public/css/bootstrap.min.css">

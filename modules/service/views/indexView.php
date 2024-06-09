@@ -10,7 +10,7 @@
             <p class="text text-white mx-auto">Wind Lập Trình tạo ra các trang web đẹp mắt, dễ sử dụng và tối ưu hóa cho mọi thiết bị, giúp doanh nghiệp nổi bật trên mạng.</p>
             <div class="cta-btns">
                 <a href="contact.html" class="btn primary-btn">Sản phẩm News</a>
-                <a href="https://www.youtube.com/watch?v=TVFu4-Kd4oM" class="btn secondary-btn youtube-popup"><i class="fas fa-play-circle"></i>Video Design</a>
+                <a href="https://www.youtube.com/watch?v=YF6xJzbzaYs&ab_channel=WindLậpTrình" class="btn secondary-btn youtube-popup"><i class="fas fa-play-circle"></i>Video Design</a>
             </div>
         </div>
         <div class="banner-image image-bottom">
