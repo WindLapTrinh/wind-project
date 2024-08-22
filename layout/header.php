@@ -36,9 +36,7 @@
     <link rel="stylesheet" href="public/css/service.css">
     <link rel="stylesheet" href="public/css/software.css">
     <link rel="stylesheet" href="public/css/zalo.css">
-
-
-
+    <link rel="icon" sizes="32x32" href="/public/images/logo/wind-contact.png" type="image/png">
 
 </head>
 
